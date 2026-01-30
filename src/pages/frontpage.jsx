@@ -63,7 +63,7 @@ export default function Frontpage() {
         </article>
 
         <img
-          src="assets/image/Jimmi.jpg"
+          src="/assets/image/Jimmi.jpg"
           alt="Picture of me"
           className="md:w-1/2 max-w-xs md:max-w-md rounded-4xl shadow-lg object-cover"
         />
