@@ -6,7 +6,6 @@ import "./styles.css";
 
 import Navigation from "./components/header-footer/navigation.jsx";
 import Footer from "./components/header-footer/footer.jsx";
-import NewestProjects from "./components/cards/newestprojects.jsx";
 
 import Frontpage from "./pages/frontpage.jsx";
 import Projects from "./pages/projects.jsx";
