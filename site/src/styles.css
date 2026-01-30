@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+/* =========================================
+   BASE LAYER
+   ========================================= */
+@layer base {
+  :root {
+    /* Font families */
+    --font-primary: Montserrat, sans-serif;
+    --font-secondary: Roboto Slab, serif;
+
+    /* =========================
+       MOBILE (default)
+       ========================= */
+    --font-xl: 1.6rem;
+    --font-xl--line-height: 1.5;
+    --font-weight-xl: 600;
+
+    --font-lg: 1.35rem;
+    --font-lg--line-height: 1.5;
+    --font-weight-lg: 500;
+
+    --font-md: 1.1rem;
+    --font-md--line-height: 1.6;
+    --font-weight-md: 400;
+
+    --font-sm: 0.85rem;
+    --font-sm--line-height: 1.6;
+    --font-weight-sm: 400;
+
+    --font-base: 1rem;
+    --font-base--line-height: 1.6;
+    --font-weight-base: 400;
+
+    /* Links */
+    --link-decoration: none;
+    --link-hover-decoration: underline;
+    --link-color: #ededed;
+
+    /* Colors */
+    --color-main-background: #23272f;
+    --color-secondary-background: #3b2323;
+    --color-primary: #ededed;
+    --color-secondary: #d9af1c;
+    --color-hover: #d9aa1c;
+    --color-active: #d97e1c;
+  }
+
+  /* =========================
+     TABLET (md)
+     ========================= */
+  @media (min-width: 768px) {
+    :root {
+      --font-xl: 1.8rem;
+      --font-lg: 1.55rem;
+      --font-md: 1.15rem;
+    }
+  }
+
+  /* =========================
+     DESKTOP (lg)
+     ========================= */
+  @media (min-width: 1024px) {
+    :root {
+      --font-xl: 2rem;
+      --font-xl--line-height: 1.7;
+
+      --font-lg: 1.7rem;
+      --font-lg--line-height: 1.6;
+
+      --font-md: 1.2rem;
+      --font-md--line-height: 1.6;
+
+      --font-sm: 0.8rem;
+      --font-sm--line-height: 1.6;
+    }
+  }
+}
+
+/* =========================================
+   COMPONENTS (typografi m.m.)
+   ========================================= */
+
+   @layer components {
+  /* Font families */
+  .text-primary {
+    font-family: var(--font-primary);
+  }
+
+  .text-secondary {
+    font-family: var(--font-secondary);
+  }
+
+  /* Font sizes */
+  .size-xl {
+    font-size: var(--font-xl);
+    line-height: var(--font-xl--line-height);
+    font-weight: var(--font-weight-xl);
+  }
+
+  .size-lg {
+    font-size: var(--font-lg);
+    line-height: var(--font-lg--line-height);
+    font-weight: var(--font-weight-lg);
+  }
+
+  .size-md {
+    font-size: var(--font-md);
+    line-height: var(--font-md--line-height);
+    font-weight: var(--font-weight-md);
+  }
+
+  .size-sm {
+    font-size: var(--font-sm);
+    line-height: var(--font-sm--line-height);
+    font-weight: var(--font-weight-sm);
+  }
+
+  .size-base {
+    font-size: var(--font-base);
+    line-height: var(--font-base--line-height);
+    font-weight: var(--font-weight-base);
+  }
+
+  /* Links */
+  .link-style {
+    text-decoration: var(--link-decoration);
+    color: var(--link-color);
+  }
+
+  .link-style:hover {
+    text-decoration: var(--link-hover-decoration);
+  }
+
+  /* Colors */
+  .bg-primary {
+    background-color: var(--color-main-background);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary-background);
+  }
+
+  .color-primary {
+    color: var(--color-primary);
+  }
+
+  .color-secondary {
+    color: var(--color-secondary);
+  }
+
+  .hover-color:hover {
+    color: var(--color-hover);
+  }
+
+  .active-color:active {
+    color: var(--color-active);
+  }
+}
+
+/* =========================================
+   UTILITIES (animationer)
+   ========================================= */
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 500ms ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slide-up 500ms ease-out forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .slide-up {
+      animation: none;
+    }
+  }
+}
