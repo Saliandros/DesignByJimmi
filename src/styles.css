@@ -42,7 +42,7 @@
     --color-main-background: #23272f;
     --color-secondary-background: #3b2323;
     --color-primary: #ededed;
-    --color-secondary: #d9af1c;
+    --color-secondary: #23272f;
     --color-hover: #d9aa1c;
     --color-active: #d97e1c;
   }
@@ -137,6 +137,7 @@
   .bg-primary {
     background-color: var(--color-main-background);
   }
+
   .bg-secondary {
     background-color: var(--color-secondary-background);
   }
@@ -151,6 +152,19 @@
 
   .hover-color:hover {
     color: var(--color-hover);
+  }
+
+  .bg-hover-color {
+    background-color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .bg-hover-color:hover {
+    background-color: var(--color-hover);
+  }
+
+  .color-active {
+    color: var(--color-active);
   }
 
   .active-color:active {
@@ -190,6 +204,51 @@
     animation: slide-up 500ms ease-out forwards;
   }
 
+  @keyframes logo-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logo-marquee {
+    --marquee-duration: 18s;
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem 0;
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  .logo-marquee__track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: logo-marquee var(--marquee-duration) linear infinite;
+  }
+
+  .logo-marquee__track--clone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-delay: calc(var(--marquee-duration) / -2);
+  }
+
+  .logo-marquee__group {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .logo-marquee__item {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+  }
+
   .typewriter-cursor {
   animation: blink 1s steps(1) infinite;
 }
@@ -200,6 +259,10 @@
   @media (prefers-reduced-motion: reduce) {
     .fade-in,
     .slide-up {
+      animation: none;
+    }
+
+    .logo-marquee__track {
       animation: none;
     }
   }

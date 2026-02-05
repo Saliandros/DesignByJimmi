@@ -1,10 +1,8 @@
-import { useState } from "react";
-
 export default function Footer() {
-  const [active, setActive] = useState("projects");
+  const currentPath = window.location.pathname;
 
   return (
-    <footer className="bg-primary color-primary shadow-inner mt-8">
+    <footer className="bg-primary color-primary shadow-inner">
       <section className="flex flex-wrap items-center justify-center gap-8 md:gap-0 md:justify-between p-6">
         <h1 className="w-full text-center md:w-auto md:text-left text-primary size-xl">
           <a href="/">DesignByJimmi</a>
@@ -15,17 +13,23 @@ export default function Footer() {
             <li className="block py-1">
               <a
                 href="/projects"
-                onClick={() => setActive("projects")}
-                className={`link-style hover-color ${active === "projects" && "color-active"}`}
+                className={`link-style hover-color ${currentPath === "/projects" && "color-active"}`}
               >
                 Projects
               </a>
             </li>
             <li className="block py-1">
               <a
+                href="/cv"
+                className={`link-style hover-color ${currentPath === "/cv" && "color-active"}`}
+              >
+                Mit CV
+              </a>
+            </li>
+            <li className="block py-1">
+              <a
                 href="/about"
-                onClick={() => setActive("about")}
-                className={`link-style hover-color ${active === "about" && "color-active"}`}
+                className={`link-style hover-color ${currentPath === "/about" && "color-active"}`}
               >
                 About
               </a>
@@ -33,8 +37,7 @@ export default function Footer() {
             <li className="block py-1">
               <a
                 href="/contact"
-                onClick={() => setActive("contact")}
-                className={`link-style hover-color ${active === "contact" && "color-active"}`}
+                className={`link-style hover-color ${currentPath === "/contact" && "color-active"}`}
               >
                 Contact
               </a>

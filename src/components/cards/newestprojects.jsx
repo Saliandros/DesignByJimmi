@@ -7,11 +7,11 @@ export default function NewestProjects() {
     .slice(0, 5);
 
   return (
-    <section className="mx-6 pb-8">
+    <section className="mx-24 pb-8 pt-8">
       <div
         className="
-          flex gap-4 overflow-x-auto snap-x snap-mandatory
-          md:grid md:grid-cols-5 md:gap-6 md:overflow-visible md:snap-none
+          flex gap-2 overflow-x-auto snap-x snap-mandatory
+          md:grid md:grid-cols-5 md:gap-4 md:overflow-visible md:snap-none
         "
       >
         {newestProjects.map((project) => (
