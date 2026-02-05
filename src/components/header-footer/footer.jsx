@@ -1,3 +1,5 @@
+import { FiFolder, FiFileText, FiUser, FiMail } from "react-icons/fi";
+
 export default function Footer() {
   const currentPath = window.location.pathname;
 
@@ -13,32 +15,36 @@ export default function Footer() {
             <li className="block py-1">
               <a
                 href="/projects"
-                className={`link-style hover-color ${currentPath === "/projects" && "color-active"}`}
+                className={`link-style hover-color inline-flex items-center gap-2 ${currentPath === "/projects" && "color-active"}`}
               >
+                <FiFolder className="w-4 h-4" aria-hidden="true" />
                 Projects
               </a>
             </li>
             <li className="block py-1">
               <a
                 href="/cv"
-                className={`link-style hover-color ${currentPath === "/cv" && "color-active"}`}
+                className={`link-style hover-color inline-flex items-center gap-2 ${currentPath === "/cv" && "color-active"}`}
               >
+                <FiFileText className="w-4 h-4" aria-hidden="true" />
                 Mit CV
               </a>
             </li>
             <li className="block py-1">
               <a
                 href="/about"
-                className={`link-style hover-color ${currentPath === "/about" && "color-active"}`}
+                className={`link-style hover-color inline-flex items-center gap-2 ${currentPath === "/about" && "color-active"}`}
               >
+                <FiUser className="w-4 h-4" aria-hidden="true" />
                 About
               </a>
             </li>
             <li className="block py-1">
               <a
                 href="/contact"
-                className={`link-style hover-color ${currentPath === "/contact" && "color-active"}`}
+                className={`link-style hover-color inline-flex items-center gap-2 ${currentPath === "/contact" && "color-active"}`}
               >
+                <FiMail className="w-4 h-4" aria-hidden="true" />
                 Contact
               </a>
             </li>
@@ -51,7 +57,6 @@ export default function Footer() {
           © 2024 DesignByJimmi. All rights reserved.
         </p>
         <p className="text-center size-sm color-primary">
-          {" "}
           read more about our&nbsp;
           <a href="/privacy-policy" className="link-style hover-color">
             Privacy Policy

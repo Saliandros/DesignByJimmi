@@ -1,4 +1,4 @@
-import { FiDownload, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiDownload, FiChevronDown, FiChevronUp, FiUser, FiPhone, FiMapPin, FiMail } from "react-icons/fi";
 import { useState } from "react";
 
 export default function CV() {
@@ -11,21 +11,21 @@ export default function CV() {
 
   return (
     <main>
-      <header className="m-6 mt-12 pb-6 max-w-5xl mx-auto">
+      <header className="m-4 mt-8 md:m-6 md:mt-12 max-w-5xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="size-xl font-bold text-primary">Mit CV</h1>
+          <h1 className="size-xl font-bold text-primary mb-4">Mit CV</h1>
         </div>
       </header>
 
-      <article className="pb-6 max-w-5xl mx-auto">
+      <article className="pb-6 max-w-5xl mx-auto px-4 md:px-0">
         {/* Personal Info */}
-        <section className="bg-primary text-white rounded-2xl p-12">
+        <section className="bg-primary text-white rounded-2xl p-6 md:p-12">
           <h2 className="size-lg font-bold text-white mb-4">Personlige oplysninger</h2>
-          <figure className="flex flex-col md:flex-row gap-34 mb-6">
+          <figure className="flex flex-col md:flex-row gap-6 md:gap-34 mb-6">
             <img
               src="/assets/image/Jimmi.jpg"
               alt="Profilbillede"
-              className="w-48 h-60 rounded-xl object-cover shadow-lg flex-shrink-0"
+              className="w-96 md:w-64 md:h-80 rounded-xl object-cover shadow-lg flex-shrink-0 mx-auto md:mx-0"
             />
             <figcaption className="text-white text-sm flex-1">
               <p className="font-semibold mb-2">Om mig</p>
@@ -34,16 +34,24 @@ export default function CV() {
           </figure>
           <div className="mt-4 grid md:grid-cols-2 gap-6 items-start">
             <address className="space-y-2 text-white text-sm not-italic">
-              <p><span className="font-semibold">Navn:</span> Jimmi Berg Larsen</p>
-              <p><span className="font-semibold">Email:</span> din.email@example.com</p>
-              <p><span className="font-semibold">Telefon:</span> +45 XX XX XX XX</p>
-              <p><span className="font-semibold">Lokation:</span> Danmark</p>
+              <p className="flex items-center gap-2">
+                <FiUser className="w-4 h-4" aria-hidden="true" />
+                Jimmi Berg Larsen
+              </p>
+              <p className="flex items-center gap-2">
+                <FiPhone className="w-4 h-4" aria-hidden="true" />
+                +45 30 53 64 14
+              </p>
+              <p className="flex items-center gap-2">
+                <FiMapPin className="w-4 h-4" aria-hidden="true" />
+                Kollegievænget 3, 8700 Horsens
+              </p>
             </address>
-            <div className="text-center md:text-center">
-              <p className="text-base text-white mb-2">Du kan også downloade mit CV her.</p>
+            <div className="text-center md:text-center space-y-3 p-4 md:p-6">
+              <p className="text-base text-white pt-2 pb-2">Du kan også downloade mit CV her.</p>
               <button
                 onClick={handleDownloadPDF}
-                className="inline-flex items-center gap-2 color-secondary px-4 py-2 rounded-lg bg-hover-color hover:text-white hover:shadow-lg transition cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 color-secondary px-4 pt-3 pb-3 rounded-lg bg-hover-color hover:text-white hover:shadow-lg transition cursor-pointer w-full sm:w-auto"
               >
                 <FiDownload className="w-5 h-5" />
                 Download mit CV
