@@ -198,7 +198,6 @@ export default function CV() {
             <li>Mødestabil</li>
             <li>Ikke ryger</li>
             <li>Kørekort kategori B</li>
-            <li>Egen Bil</li>
           </ul>
         </section>
       </article>
