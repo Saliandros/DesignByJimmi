@@ -2,8 +2,6 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import "./styles.css";
-
 import Navigation from "./components/header-footer/navigation.jsx";
 import Footer from "./components/header-footer/footer.jsx";
 
@@ -19,10 +17,10 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <div className="min-h-screen flex flex-col">
+    <div className="app-shell">
       <Navigation />
 
-      <main className="flex-1">
+      <main className="app-shell__main">
         <Routes>
           <Route path="/" element={<Frontpage />} />
           <Route path="/projects" element={<Projects />} />

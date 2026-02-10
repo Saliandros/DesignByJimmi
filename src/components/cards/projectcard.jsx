@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, badgeNumber }) {
   const [dragStart, setDragStart] = useState(null);
 
   const handleMouseDown = (e) => {
@@ -24,31 +24,28 @@ export default function ProjectCard({ project }) {
 
   return (
     <article
-      className="
-        shrink-0 w-64 h-96 max-w-sm snap-center
-        rounded-xl shadow-md overflow-hidden
-        mx-0 flex flex-col
-        md:hover:shadow-lg md:transition-shadow md:cursor-pointer
-      "
+      className="project-card"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
     >
+      {badgeNumber ? (
+        <div className="project-card__badge" aria-hidden="true">
+          {badgeNumber}
+        </div>
+      ) : null}
       <div>
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover"
+          className="project-card__image"
           loading="lazy"
         />
       </div>
-      <div className="bg-white flex flex-col justify-between flex-grow p-4 pb-24">
+      <div className="project-card__content">
         <div>
-          <h3 className="text-lg font-semibold mb-4">{project.title}</h3>
-          <p className="text-sm mb-4">{project.description}</p>
+          <h3 className="project-card__title">{project.title}</h3>
+          <p className="project-card__description">{project.description}</p>
         </div>
-        <a href={project.link} className="text-blue-600 hover:underline md:hidden">
-          Læs mere her
-        </a>
       </div>
     </article>
   );

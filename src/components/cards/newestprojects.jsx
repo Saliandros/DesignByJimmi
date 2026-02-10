@@ -7,15 +7,14 @@ export default function NewestProjects() {
     .slice(0, 5);
 
   return (
-    <section className="mx-24 pb-8 pt-8">
-      <div
-        className="
-          flex gap-2 overflow-x-auto snap-x snap-mandatory
-          md:grid md:grid-cols-5 md:gap-4 md:overflow-visible md:snap-none
-        "
-      >
-        {newestProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+    <section className="newest-projects">
+      <div className="newest-projects__list">
+        {newestProjects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            badgeNumber={index + 1}
+          />
         ))}
       </div>
     </section>

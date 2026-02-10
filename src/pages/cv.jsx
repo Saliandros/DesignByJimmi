@@ -1,4 +1,4 @@
-import { FiDownload, FiChevronDown, FiChevronUp, FiUser, FiPhone, FiMapPin, FiMail } from "react-icons/fi";
+import { FiDownload, FiChevronDown, FiUser, FiPhone, FiMapPin } from "react-icons/fi";
 import { useState } from "react";
 
 export default function CV() {
@@ -11,49 +11,49 @@ export default function CV() {
 
   return (
     <main>
-      <header className="m-4 mt-8 md:m-6 md:mt-12 max-w-5xl mx-auto px-4 md:px-0">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="size-xl font-bold text-primary mb-4">Mit CV</h1>
+      <header className="cv-header">
+        <div className="cv-header__inner">
+          <h1 className="cv-title">Mit CV</h1>
         </div>
       </header>
 
-      <article className="pb-6 max-w-5xl mx-auto px-4 md:px-0">
+      <article className="cv-body">
         {/* Personal Info */}
-        <section className="bg-primary text-white rounded-2xl p-6 md:p-12">
-          <h2 className="size-lg font-bold text-white mb-4">Personlige oplysninger</h2>
-          <figure className="flex flex-col md:flex-row gap-6 md:gap-34 mb-6">
+        <section className="cv-section cv-section--primary">
+          <h2 className="cv-section__title">Personlige oplysninger</h2>
+          <figure className="cv-profile">
             <img
               src="/assets/image/Jimmi.jpg"
               alt="Profilbillede"
-              className="w-96 md:w-64 md:h-80 rounded-xl object-cover shadow-lg flex-shrink-0 mx-auto md:mx-0"
+              className="cv-profile__image"
             />
-            <figcaption className="text-white text-sm flex-1">
-              <p className="font-semibold mb-2">Om mig</p>
-              <p>Jeg er i gang som professionsbachelor i webudvikling på Aarhus Erhvervesakademi, hvor jeg arbejder med React, JavaScript, Tailwind CSS og meget mere. Som full-stack developer har jeg også kendskab til backend med Node.js & Express samt databaser som NoSQL og SQL. Før webudvikling har jeg færdiggjort multimediedesigner, som har givet mig erfaring med digital design. Jeg har også færdiggjort IT-supporter, som har givet mig erfaring med PowerShell samt netværk.</p>
+            <figcaption className="cv-profile__content">
+              <p className="cv-profile__heading">Om mig</p>
+              <p>Jeg er i gang som professionsbachelor i webudvikling på Aarhus Erhvervesakademi, hvor jeg arbejder med React, JavaScript, CSS og meget mere. Som full-stack developer har jeg også kendskab til backend med Node.js & Express samt databaser som NoSQL og SQL. Før webudvikling har jeg færdiggjort multimediedesigner, som har givet mig erfaring med digital design. Jeg har også færdiggjort IT-supporter, som har givet mig erfaring med PowerShell samt netværk.</p>
             </figcaption>
           </figure>
-          <div className="mt-4 grid md:grid-cols-2 gap-6 items-start">
-            <address className="space-y-2 text-white text-sm not-italic">
-              <p className="flex items-center gap-2">
-                <FiUser className="w-4 h-4" aria-hidden="true" />
+          <div className="cv-contact">
+            <address className="cv-contact__address">
+              <p className="cv-contact__row">
+                <FiUser className="cv-contact__icon" aria-hidden="true" />
                 Jimmi Berg Larsen
               </p>
-              <p className="flex items-center gap-2">
-                <FiPhone className="w-4 h-4" aria-hidden="true" />
+              <p className="cv-contact__row">
+                <FiPhone className="cv-contact__icon" aria-hidden="true" />
                 +45 30 53 64 14
               </p>
-              <p className="flex items-center gap-2">
-                <FiMapPin className="w-4 h-4" aria-hidden="true" />
+              <p className="cv-contact__row">
+                <FiMapPin className="cv-contact__icon" aria-hidden="true" />
                 Kollegievænget 3, 8700 Horsens
               </p>
             </address>
-            <div className="text-center md:text-center space-y-3 p-4 md:p-6">
-              <p className="text-base text-white pt-2 pb-2">Du kan også downloade mit CV her.</p>
+            <div className="cv-download">
+              <p className="cv-download__text">Du kan også downloade mit CV her.</p>
               <button
                 onClick={handleDownloadPDF}
-                className="inline-flex items-center justify-center gap-2 color-secondary px-4 pt-3 pb-3 rounded-lg bg-hover-color hover:text-white hover:shadow-lg transition cursor-pointer w-full sm:w-auto"
+                className="cv-download__button"
               >
-                <FiDownload className="w-5 h-5" />
+                <FiDownload className="cv-download__icon" />
                 Download mit CV
               </button>
             </div>
@@ -61,97 +61,95 @@ export default function CV() {
         </section>
 
         {/* Education */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Uddannelse</h2>
-          <article className="border-l-4 border-primary pl-4">
-            <h3 className="font-bold text-primary mb-1">Webudvikler - Igangværende</h3>
-            <p className="text-sm text-gray-600 mb-2">Aarhus Erhvervesakademi - 2025 - 2027</p>
-            <p className="text-primary">Speciale - Full-Stack developer</p>
-            <p className="text-sm mt-2">En praksisnær uddannelse inden for webudvikling, hvor jeg lærer at udvikle moderne webapplikationer med fokus på både frontend og backend. Uddannelsen omfatter teknologier som React, JavaScript, HTML og CSS samt databasehåndtering og API-integration.</p>
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Uddannelse</h2>
+          <article className="cv-entry">
+            <h3 className="cv-entry__title">Webudvikler - Igangværende</h3>
+            <p className="cv-entry__meta">Aarhus Erhvervesakademi - 2025 - 2027</p>
+            <p className="cv-entry__role">Speciale - Full-Stack developer</p>
+            <p className="cv-entry__description">En praksisnær uddannelse inden for webudvikling, hvor jeg lærer at udvikle moderne webapplikationer med fokus på både frontend og backend. Uddannelsen omfatter teknologier som React, JavaScript, HTML og CSS samt databasehåndtering og API-integration.</p>
           </article>
         </section>
 
         {/* Previous Education */}
-        <section className="bg-white rounded-2xl p-6 mb-10 transition-shadow duration-300 hover:shadow-lg">
+        <section className="cv-section cv-section--card cv-section--hover">
           <button
             onClick={() => setPreviousEducationOpen(!previousEducationOpen)}
-            className="w-full flex justify-between items-center cursor-pointer hover-color active-color transition-colors duration-200"
+            className="cv-toggle"
           >
             <h2 
-              className={`size-lg font-bold text-secondary transition-colors duration-200`}
-              style={previousEducationOpen ? { color: 'var(--color-active)' } : {}}
+              className="cv-toggle__title"
+              style={previousEducationOpen ? { color: 'var(--color-accent-active)' } : {}}
             >
               Tidligere uddannelser
             </h2>
-            <div className={`transition-transform duration-300 ${previousEducationOpen ? 'rotate-180' : ''}`}>
-              <FiChevronDown className="w-6 h-6 text-secondary" />
+            <div className={`cv-toggle__icon ${previousEducationOpen ? 'cv-toggle__icon--open' : ''}`}>
+              <FiChevronDown className="cv-toggle__chevron" />
             </div>
           </button>
           <div
-            className={`transition-all duration-500 ease-in-out overflow-hidden ${
-              previousEducationOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-            }`}
+            className={`cv-toggle__content ${previousEducationOpen ? 'cv-toggle__content--open' : ''}`}
           >
-            <div className="space-y-6 mt-4">
-              <article className="border-l-4 border-primary pl-4">
-                <h3 className="font-bold text-primary mb-1">Multimediedesigner</h3>
-                <p className="text-sm text-gray-600 mb-2">Erhvervesakademi Midtvest - 2023 - 2025</p>
-                <p className="text-sm mt-2">En komprehensiv uddannelse inden for digital design og multimedieproduktion. Læring om grafisk design, videobehandling, webdesign og brugergrænsefladedesign med fokus på kreative og funktionelle løsninger.</p>
+            <div className="cv-toggle__list">
+              <article className="cv-entry">
+                <h3 className="cv-entry__title">Multimediedesigner</h3>
+                <p className="cv-entry__meta">Erhvervesakademi Midtvest - 2023 - 2025</p>
+                <p className="cv-entry__description">En komprehensiv uddannelse inden for digital design og multimedieproduktion. Læring om grafisk design, videobehandling, webdesign og brugergrænsefladedesign med fokus på kreative og funktionelle løsninger.</p>
               </article>
-              <article className="border-l-4 border-primary pl-4">
-                <h3 className="font-bold text-primary mb-1">IT-Supporter</h3>
-                <p className="text-sm text-gray-600 mb-2">Mercentec Viborg - 2015 - 2019</p>
-                <p className="text-sm mt-2">En erhvervsuddannelse med praktik inden for IT-support og systembeherskelse. Uddannelsen gav mig erfaringer med brugeradministration, troubleshooting, netværk og grundlæggende systemadministration.</p>
+              <article className="cv-entry">
+                <h3 className="cv-entry__title">IT-Supporter</h3>
+                <p className="cv-entry__meta">Mercentec Viborg - 2015 - 2019</p>
+                <p className="cv-entry__description">En erhvervsuddannelse med praktik inden for IT-support og systembeherskelse. Uddannelsen gav mig erfaringer med brugeradministration, troubleshooting, netværk og grundlæggende systemadministration.</p>
               </article>
             </div>
           </div>
         </section>
 
         {/* Experience */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Arbejdserfaring</h2>
-          <div className="space-y-6">
-            <article className="border-l-4 border-primary pl-4">
-              <h3 className="font-bold text-primary mb-1">Praktikant - Digital Design</h3>
-              <p className="text-sm text-gray-600 mb-2">Flamingo Tours - 2025</p>
-              <p className="text-sm mt-2">Praktikforløb som del af Multimediedesigner-uddannelsen med fokus på digital design, markedsføringsmaterialer og brugeroplevelse.</p>
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Arbejdserfaring</h2>
+          <div className="cv-stack">
+            <article className="cv-entry">
+              <h3 className="cv-entry__title">Praktikant - Digital Design</h3>
+              <p className="cv-entry__meta">Flamingo Tours - 2025</p>
+              <p className="cv-entry__description">Praktikforløb som del af Multimediedesigner-uddannelsen med fokus på digital design, markedsføringsmaterialer og brugeroplevelse.</p>
             </article>
-            <article className="border-l-4 border-primary pl-4">
-              <h3 className="font-bold text-primary mb-1">Uddannelses Ambassadør</h3>
-              <p className="text-sm text-gray-600 mb-2">Erhvervsakademi Midtvest - 2023 - 2025</p>
-              <p className="text-sm mt-2">Repræsenterede skolen ved studievalgsarrangementer, informerede kommende studerende og bidrog til at skabe et positivt læringsmiljø.</p>
+            <article className="cv-entry">
+              <h3 className="cv-entry__title">Uddannelses Ambassadør</h3>
+              <p className="cv-entry__meta">Erhvervsakademi Midtvest - 2023 - 2025</p>
+              <p className="cv-entry__description">Repræsenterede skolen ved studievalgsarrangementer, informerede kommende studerende og bidrog til at skabe et positivt læringsmiljø.</p>
             </article>
-            <article className="border-l-4 border-primary pl-4">
-              <h3 className="font-bold text-primary mb-1">Vikar</h3>
-              <p className="text-sm text-gray-600 mb-2">Temp-Team - 2022 - 2025</p>
-              <p className="text-sm mt-2">Diverse vikariater sideløbende med uddannelsen, herunder rengøring og serviceopgaver.</p>
+            <article className="cv-entry">
+              <h3 className="cv-entry__title">Vikar</h3>
+              <p className="cv-entry__meta">Temp-Team - 2022 - 2025</p>
+              <p className="cv-entry__description">Diverse vikariater sideløbende med uddannelsen, herunder rengøring og serviceopgaver.</p>
             </article>
           </div>
         </section>
 
         {/* Leisure & Volunteer */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Fritid & Frivilligt arbejde</h2>
-          <article className="border-l-4 border-primary pl-4">
-            <h3 className="font-bold text-primary mb-1">Fredagsbar</h3>
-            <p className="text-sm text-gray-600 mb-2">Erhvervsakademi Midtvest - 2023 - 2025</p>
-            <p className="text-sm mt-2">Aktivt medlem af fredagsbaren hvor jeg hjalp med planlægning, arrangement og drift af sociale arrangementer for medstuderende.</p>
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Fritid & Frivilligt arbejde</h2>
+          <article className="cv-entry">
+            <h3 className="cv-entry__title">Fredagsbar</h3>
+            <p className="cv-entry__meta">Erhvervsakademi Midtvest - 2023 - 2025</p>
+            <p className="cv-entry__description">Aktivt medlem af fredagsbaren hvor jeg hjalp med planlægning, arrangement og drift af sociale arrangementer for medstuderende.</p>
           </article>
         </section>
 
         {/* Languages */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Sprog</h2>
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Sprog</h2>
           <div>
-            <h3 className="font-semibold text-primary text-sm mb-2">Flydende</h3>
-            <ul className="space-y-2 text-sm text-primary mb-4">
+            <h3 className="cv-subtitle">Flydende</h3>
+            <ul className="cv-list">
               <li>Dansk - Modersmål</li>
               <li>Engelsk - Flydende</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-primary text-sm mb-2">Skriftligt kendskab</h3>
-            <ul className="space-y-2 text-sm text-primary">
+            <h3 className="cv-subtitle">Skriftligt kendskab</h3>
+            <ul className="cv-list">
               <li>Norsk</li>
               <li>Svensk</li>
             </ul>
@@ -159,20 +157,20 @@ export default function CV() {
         </section>
 
         {/* Skills */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Færdigheder</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Færdigheder</h2>
+          <div className="cv-skills">
             <article>
-              <h3 className="font-bold text-primary mb-3">Frontend</h3>
-              <ul className="space-y-1 text-sm text-primary">
+              <h3 className="cv-skill__title">Frontend</h3>
+              <ul className="cv-list">
                 <li>React & JavaScript</li>
-                <li>Tailwind CSS</li>
+                <li>CSS</li>
                 <li>Git & GitHub</li>
               </ul>
             </article>
             <article>
-              <h3 className="font-bold text-primary mb-3">Backend</h3>
-              <ul className="space-y-1 text-sm text-primary">
+              <h3 className="cv-skill__title">Backend</h3>
+              <ul className="cv-list">
                 <li>Node.js & Express</li>
                 <li>PowerShell ISE & Scripting</li>
                 <li>Netværk CCNA fra 2019</li>
@@ -180,16 +178,16 @@ export default function CV() {
               </ul>
             </article>
             <article>
-              <h3 className="font-bold text-primary mb-3">Databaser</h3>
-              <ul className="space-y-1 text-sm text-primary">
+              <h3 className="cv-skill__title">Databaser</h3>
+              <ul className="cv-list">
                 <li>Mongoose</li>
                 <li>SQL</li>
                 <li>SQL Databaser</li>
               </ul>
             </article>
             <article>
-              <h3 className="font-bold text-primary mb-3">OS-Erfaringer</h3>
-              <ul className="space-y-2 text-sm text-primary">
+              <h3 className="cv-skill__title">OS-Erfaringer</h3>
+              <ul className="cv-list">
                 <li>Mac OS X Mavericks</li>
                 <li>Windows XP/Vista/7/8/10</li>
                 <li>Linux (Ubuntu, Mint)</li>
@@ -200,9 +198,9 @@ export default function CV() {
         </section>
 
         {/* Additional Information */}
-        <section className="bg-white rounded-2xl p-6 mb-10">
-          <h2 className="size-lg font-bold text-secondary mb-4">Yderligere Information</h2>
-          <ul className="space-y-2 text-sm text-primary">
+        <section className="cv-section cv-section--card">
+          <h2 className="cv-section__title">Yderligere Information</h2>
+          <ul className="cv-list cv-list--loose">
             <li>Mødestabil</li>
             <li>Ikke ryger</li>
             <li>Kørekort kategori B</li>

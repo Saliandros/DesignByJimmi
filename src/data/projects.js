@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "Mit personlige portfolio website lavet med React og Tailwind CSS.",
+    description: "Mit personlige portfolio website lavet med React og CSS.",
     image: "/assets/image/Jimmi.jpg",
     link: "#",
     date: "29-01-2026",

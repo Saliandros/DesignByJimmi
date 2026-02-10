@@ -54,16 +54,16 @@ const Typewriter = ({ words, prefix = "I Can: " }) => {
 
   return (
     <span
-      className="relative cursor-pointer inline-block text-primary size-md"
+      className="typewriter"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {displayed}
       <span
         className={
-          `typewriter-cursor inline-block ml-1 align-baseline${
+          `typewriter__cursor${
             (!isDeleting && charIndex > (words[wordIndex % words.length] || "").length && (pauseStep === 2 || pauseStep === 3))
-              ? " animate-pulse"
+              ? " typewriter__cursor--pulse"
               : ""
           }`
         }
@@ -72,10 +72,10 @@ const Typewriter = ({ words, prefix = "I Can: " }) => {
       </span>
       {hovered && (
         <ul
-          className="absolute left-0 top-full bg-white border border-gray-300 shadow-lg z-10 list-none min-w-[120px] p-2 mt-1 rounded"
+          className="typewriter__dropdown"
         >
           {words.map((word, idx) => (
-            <li key={idx} className="py-1 px-2 hover:bg-gray-100 rounded transition-colors duration-150">{word}</li>
+            <li key={idx} className="typewriter__item">{word}</li>
           ))}
         </ul>
       )}
