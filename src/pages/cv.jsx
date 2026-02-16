@@ -201,7 +201,6 @@ export default function CV() {
         <section className="cv-section cv-section--card">
           <h2 className="cv-section__title">Yderligere Information</h2>
           <ul className="cv-list cv-list--loose">
-            <li>Mødestabil</li>
             <li>Ikke ryger</li>
             <li>Kørekort kategori B</li>
           </ul>
