@@ -22,11 +22,22 @@ export default function ProjectCard({ project, badgeNumber }) {
     setDragStart(null);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      window.location.href = project.link;
+    }
+  };
+
   return (
     <article
       className="project-card"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="link"
+      aria-label={`Aabn projekt: ${project.title}`}
     >
       {badgeNumber ? (
         <div className="project-card__badge" aria-hidden="true">
