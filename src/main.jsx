@@ -28,7 +28,6 @@ root.render(
           <Route path="/cv" element={<CV />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/contact-form" element={<ContactForm />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>

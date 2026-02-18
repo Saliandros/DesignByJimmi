@@ -1,3 +1,5 @@
+import ContactForm from "../components/form/contactform.jsx";
+
 export default function Contact() {
   return (
     <section className="">
