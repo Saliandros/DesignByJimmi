@@ -4,62 +4,60 @@ export default function Footer() {
   const currentPath = window.location.pathname;
 
   return (
-    <footer className="site-footer">
-      <section className="site-footer__top">
-        <h1 className="site-footer__brand">
+    <footer className="footer">
+      <section className="footer-top">
+        <p className="heading-logo">
           <a href="/">DesignByJimmi</a>
-        </h1>
-
-        <nav className="site-footer__nav">
-          <ul className="site-footer__list">
-            <li className="site-footer__item">
+        </p>
+        <nav className="navigation">
+          <ul className="navigation-list">
+            <li>
               <a
                 href="/projects"
-                className={`link-style hover-color site-footer__link ${currentPath === "/projects" && "color-active"}`}
+                className={`link-style hover-color navigation-link ${currentPath === "/projects" && "link-style-active"}`}
               >
-                <FiFolder className="site-footer__icon" aria-hidden="true" />
+                <FiFolder className="navigation-icon" aria-hidden="true" />
                 Projects
               </a>
             </li>
-            <li className="site-footer__item">
+            <li>
               <a
                 href="/cv"
-                className={`link-style hover-color site-footer__link ${currentPath === "/cv" && "color-active"}`}
+                className={`link-style hover-color navigation-link ${currentPath === "/cv" && "link-style-active"}`}
               >
-                <FiFileText className="site-footer__icon" aria-hidden="true" />
+                <FiFileText className="navigation-icon" aria-hidden="true" />
                 Mit CV
               </a>
             </li>
-            <li className="site-footer__item">
+            <li>
               <a
                 href="/about"
-                className={`link-style hover-color site-footer__link ${currentPath === "/about" && "color-active"}`}
+                className={`link-style hover-color navigation-link ${currentPath === "/about" && "link-style-active"}`}
               >
-                <FiUser className="site-footer__icon" aria-hidden="true" />
+                <FiUser className="navigation-icon" aria-hidden="true" />
                 About
               </a>
             </li>
-            <li className="site-footer__item">
+            <li>
               <a
                 href="/contact"
-                className={`link-style hover-color site-footer__link ${currentPath === "/contact" && "color-active"}`}
+                className={`link-style hover-color navigation-link ${currentPath === "/contact" && "link-style-active"}`}
               >
-                <FiMail className="site-footer__icon" aria-hidden="true" />
+                <FiMail className="navigation-icon" aria-hidden="true" />
                 Contact
               </a>
             </li>
           </ul>
         </nav>
       </section>
-
-      <section className="site-footer__bottom">
-        <p className="site-footer__text">
+      <section className="footer-bottom">
+        <p className="footer-text">
           © 2024 DesignByJimmi. All rights reserved.
         </p>
-        <p className="site-footer__text">
-          read more about our&nbsp;
+        <p className="footer-text">
+          Læs mere om vores&nbsp;
           <a href="/privacy-policy" className="link-style hover-color">
-            Privacy Policy
+            Privatlivspolitik
           </a>
         </p>
       </section>

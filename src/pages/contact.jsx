@@ -3,8 +3,10 @@ import ContactForm from "../components/form/contactform.jsx";
 export default function Contact() {
   return (
     <section className="">
-        <h2 className="size-xl fade-in slide-up">Dette er kontakt siden</h2>
-        <ContactForm />
+      <ContactForm>
+        <h2>Kontakt mig</h2>
+        <p>Du er velkommen til at sende en besked via formularen herunder.</p>
+      </ContactForm>
     </section>
   );
 }
