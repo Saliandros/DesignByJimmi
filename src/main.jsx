@@ -13,6 +13,10 @@ import Contact from "./pages/contact.jsx";
 import PrivacyPolicy from "./pages/privacy-policy.jsx";
 import Page404 from "./pages/page404.jsx";
 
+/* project routes imports */
+import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
+import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
+
 const root = createRoot(document.getElementById("root"));
 
 root.render(
@@ -28,6 +32,10 @@ root.render(
           <Route path="/cv" element={<CV />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+          {/* project routes */}
+          <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
+          <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>
