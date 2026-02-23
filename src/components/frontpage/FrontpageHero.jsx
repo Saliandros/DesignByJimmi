@@ -1,4 +1,5 @@
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import Typewriter from "../writers/typewriter";
 
 export default function FrontpageHero() {
   return (

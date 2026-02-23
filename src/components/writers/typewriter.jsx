@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
  * <Typewriter words={["React", "Angular"]} prefix="Programmets tech stack er: " />
  * Hvis prefix ikke angives, bruges "I Can: " som standard.
  */
-const Typewriter = ({ words, prefix = "I Can: " }) => {
+const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
   const [displayed, setDisplayed] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -16,8 +16,20 @@ const Typewriter = ({ words, prefix = "I Can: " }) => {
 
   useEffect(() => {
     if (hovered) return; // Stop animation når man hover
-    const currentWord = words[wordIndex % words.length];
     let timeout;
+
+    if (!words.length) {
+      timeout = setTimeout(() => {
+        setDisplayed("");
+        setCharIndex(0);
+        setWordIndex(0);
+        setIsDeleting(false);
+        setPauseStep(0);
+      }, 0);
+      return () => clearTimeout(timeout);
+    }
+
+    const currentWord = words[wordIndex % words.length];
 
     if (!isDeleting) {
       if (charIndex <= currentWord.length) {
@@ -70,7 +82,7 @@ const Typewriter = ({ words, prefix = "I Can: " }) => {
       >
         |
       </span>
-      {hovered && (
+      {hovered && words.length > 0 && (
         <ul
           className="typewriter__dropdown"
         >
