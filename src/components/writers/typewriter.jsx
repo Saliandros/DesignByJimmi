@@ -73,9 +73,9 @@ const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
       {displayed}
       <span
         className={
-          `typewriter__cursor${
+          `typewriter-cursor${
             (!isDeleting && charIndex > (words[wordIndex % words.length] || "").length && (pauseStep === 2 || pauseStep === 3))
-              ? " typewriter__cursor--pulse"
+              ? " typewriter-cursor-pulse"
               : ""
           }`
         }
@@ -84,10 +84,10 @@ const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
       </span>
       {hovered && words.length > 0 && (
         <ul
-          className="typewriter__dropdown"
+          className="typewriter-dropdown"
         >
           {words.map((word, idx) => (
-            <li key={idx} className="typewriter__item">{word}</li>
+            <li key={idx} className="typewriter-item">{word}</li>
           ))}
         </ul>
       )}

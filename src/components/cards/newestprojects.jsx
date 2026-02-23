@@ -8,15 +8,16 @@ export default function NewestProjects() {
 
   return (
     <section className="newest-projects">
-      <div className="newest-projects__list">
+      <ul className="newest-projects-list">
         {newestProjects.map((project, index) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            badgeNumber={index + 1}
-          />
+          <li key={project.id}>
+            <ProjectCard
+              project={project}
+              badgeNumber={index + 1}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

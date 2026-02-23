@@ -4,15 +4,13 @@ export default function Projects() {
   return (
     <main className="frontpage">
       <section>
-        <h2 className="frontpage-latest__title">Alle projekter</h2>
+        <h2 className="frontpage-latest-title">Alle projekter</h2>
         <p className="projects-description">
           Her finder du alle de projekter, jeg har arbejdet på. Kortene kan navigeres med tast eller mus.
         </p>
       </section>
 
-      <div className="projects-grid-wrapper">
-        <AllProjects />
-      </div>
+      <AllProjects />
     </main>
   );
 }

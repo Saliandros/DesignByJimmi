@@ -6,5 +6,9 @@ export default function AllProjects() {
     (a, b) => new Date(b.date) - new Date(a.date)
   );
 
-  return <ProjectsGrid projects={sortedProjects} />;
+  return (
+    <div className="projects-grid">
+      <ProjectsGrid projects={sortedProjects} />
+    </div>
+  );
 }

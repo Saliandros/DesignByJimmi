@@ -8,8 +8,8 @@ export default function PrivacyPolicy() {
       </header>
 
       <article className="cv-body">
-        <section className="cv-section cv-section--card">
-          <h2 className="cv-section__title">Om denne politik</h2>
+        <section className="cv-section cv-section-card">
+          <h2 className="cv-section-title">Om denne politik</h2>
           <p>
             Denne privatlivspolitik beskriver, hvordan jeg behandler dine
             personoplysninger på denne hjemmeside. Jeg er forpligtet til at
@@ -17,8 +17,8 @@ export default function PrivacyPolicy() {
           </p>
         </section>
 
-        <section className="cv-section cv-section--card">
-          <h2 className="cv-section__title">Indsamling af data</h2>
+        <section className="cv-section cv-section-card">
+          <h2 className="cv-section-title">Indsamling af data</h2>
           <p>
             Jeg indsamler kun de oplysninger, der er nødvendige for at drive
             hjemmesiden. Dette kan omfatte:
@@ -30,8 +30,8 @@ export default function PrivacyPolicy() {
           </ul>
         </section>
 
-        <section className="cv-section cv-section--card">
-          <h2 className="cv-section__title">Brug af data</h2>
+        <section className="cv-section cv-section-card">
+          <h2 className="cv-section-title">Brug af data</h2>
           <p>Dine oplysninger bruges alene til at:</p>
           <ul className="cv-list">
             <li>Besvare dine henvendelser</li>
@@ -40,8 +40,8 @@ export default function PrivacyPolicy() {
           </ul>
         </section>
 
-        <section className="cv-section cv-section--card">
-          <h2 className="cv-section__title">Dine rettigheder</h2>
+        <section className="cv-section cv-section-card">
+          <h2 className="cv-section-title">Dine rettigheder</h2>
           <p>
             Du har ret til at anmode om adgang til, rettelse af eller sletning
             af dine personoplysninger. Du kan også tilbagetrække dit samtykke
@@ -49,8 +49,8 @@ export default function PrivacyPolicy() {
           </p>
         </section>
 
-        <section className="cv-section cv-section--card">
-          <h2 className="cv-section__title">Kontakt</h2>
+        <section className="cv-section cv-section-card">
+          <h2 className="cv-section-title">Kontakt</h2>
           <p>
             Hvis du har spørgsmål til denne privatlivspolitik eller ønsker at
             udøve dine rettigheder, kan du kontakte mig via kontaktformularen.

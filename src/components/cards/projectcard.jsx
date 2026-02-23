@@ -40,23 +40,19 @@ export default function ProjectCard({ project, badgeNumber }) {
       aria-label={`Aabn projekt: ${project.title}`}
     >
       {badgeNumber ? (
-        <div className="project-card__badge" aria-hidden="true">
+        <div className="project-card-badge" aria-hidden="true">
           {badgeNumber}
         </div>
       ) : null}
-      <div>
-        <img
-          src={project.image}
-          alt={project.title}
-          className="project-card__image"
-          loading="lazy"
-        />
-      </div>
-      <div className="project-card__content">
-        <div>
-          <h3 className="project-card__title">{project.title}</h3>
-          <p className="project-card__description">{project.description}</p>
-        </div>
+      <img
+        src={project.image}
+        alt={project.title}
+        className="project-card-image"
+        loading="lazy"
+      />
+      <div className="project-card-content">
+        <h3 className="project-card-title">{project.title}</h3>
+        <p className="project-card-description">{project.description}</p>
       </div>
     </article>
   );
