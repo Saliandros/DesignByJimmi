@@ -4,47 +4,52 @@ export default function Navigation() {
   const currentPath = window.location.pathname;
 
   return (
-    <header className="site-nav">
-      <p className="site-nav__brand">
-        <a href="/" className="site-nav__brand-link">
+    <header className="heading">
+      <p className="heading-logo">
+        <a
+          href="/"
+          className="heading-logo-link"
+          title="Gå til forsiden"
+          aria-label="Gå til forsiden"
+        >
           DesignByJimmi
         </a>
       </p>
-      <nav className="site-nav__menu">
-        <ul className="site-nav__list">
+      <nav className="navigation">
+        <ul className="navigation-list">
           <li>
             <a
               href="/projects"
-              className={`link-style hover-color site-nav__link ${currentPath === "/projects" && "color-active"}`}
+              className={`link-style hover-color navigation-link ${currentPath === "/projects" && "link-style-active"}`}
             >
-              <FiFolder className="site-nav__icon" aria-hidden="true" />
+              <FiFolder className="navigation-icon" aria-hidden="true" />
               Projects
             </a>
           </li>
           <li>
             <a
               href="/cv"
-              className={`link-style hover-color site-nav__link ${currentPath === "/cv" && "color-active"}`}
+              className={`link-style hover-color navigation-link ${currentPath === "/cv" && "link-style-active"}`}
             >
-              <FiFileText className="site-nav__icon" aria-hidden="true" />
+              <FiFileText className="navigation-icon" aria-hidden="true" />
               Mit CV
             </a>
           </li>
           <li>
             <a
               href="/about"
-              className={`link-style hover-color site-nav__link ${currentPath === "/about" && "color-active"}`}
+              className={`link-style hover-color navigation-link ${currentPath === "/about" && "link-style-active"}`}
             >
-              <FiUser className="site-nav__icon" aria-hidden="true" />
+              <FiUser className="navigation-icon" aria-hidden="true" />
               About
             </a>
           </li>
           <li>
             <a
               href="/contact"
-              className={`link-style hover-color site-nav__link ${currentPath === "/contact" && "color-active"}`}
+              className={`link-style hover-color navigation-link ${currentPath === "/contact" && "link-style-active"}`}
             >
-              <FiMail className="site-nav__icon" aria-hidden="true" />
+              <FiMail className="navigation-icon" aria-hidden="true" />
               Contact
             </a>
           </li>

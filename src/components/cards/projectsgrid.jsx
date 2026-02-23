@@ -4,7 +4,7 @@ export default function ProjectsGrid({ projects }) {
   return (
     <section className="projects-grid">
       <div
-        className="projects-grid__list"
+        className="projects-grid-list"
       >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />

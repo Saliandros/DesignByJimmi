@@ -56,38 +56,38 @@ export default function FrontpageTools() {
 
   return (
     <section className="frontpage-tools">
-      <div className="frontpage-tools__panel">
-        <h2 className="frontpage-tools__title">
+      <div className="frontpage-tools-panel">
+        <h2 className="frontpage-tools-title">
           Jeg har kendskab til
         </h2>
         <div
-          className="frontpage-tools__content"
+          className="frontpage-tools-content"
           onMouseEnter={() => setIsSlideHovering(true)}
           onMouseLeave={() => setIsSlideHovering(false)}
         >
-          <div className="frontpage-tools__list">
-            <ul className="frontpage-tools__grid">
+          <div className="frontpage-tools-list">
+            <ul className="frontpage-tools-grid">
               {visibleTools.map((tool) => {
                 const toolIndex = tools.findIndex((item) => item.label === tool.label);
                 return (
                   <li
                     key={tool.label}
-                    className={`frontpage-tools__item ${
-                      activeToolIndex === toolIndex ? "frontpage-tools__item--active" : ""
+                    className={`frontpage-tools-item ${
+                      activeToolIndex === toolIndex ? "frontpage-tools-item--active" : ""
                     }`}
                   >
                     <button
                       type="button"
-                      className="frontpage-tools__item-button"
+                      className="frontpage-tools-item-button"
                       onClick={() => handleToolSelect(toolIndex)}
                     >
-                      <div className="frontpage-tools__icon">
+                      <div className="frontpage-tools-icon">
                         <tool.Icon
-                          className="frontpage-tools__svg color-primary"
+                          className="frontpage-tools-svg color-primary"
                           aria-hidden="true"
                         />
                       </div>
-                      <span className="frontpage-tools__label">
+                      <span className="frontpage-tools-label">
                         {tool.label}
                       </span>
                     </button>
@@ -96,43 +96,43 @@ export default function FrontpageTools() {
               })}
             </ul>
 
-            <div className="frontpage-tools__pager">
+            <div className="frontpage-tools-pager">
               <button
                 type="button"
-                className="frontpage-tools__pager-button"
+                className="frontpage-tools-pager-button"
                 onClick={handleToolsPrev}
                 aria-label="Forrige vaerktoejer"
               >
-                <FiChevronLeft className="frontpage-tools__pager-chevron" />
+                <FiChevronLeft className="frontpage-tools-pager-chevron" />
               </button>
               <button
                 type="button"
-                className="frontpage-tools__pager-button"
+                className="frontpage-tools-pager-button"
                 onClick={handleToolsNext}
                 aria-label="Naeste vaerktoejer"
               >
-                <FiChevronRight className="frontpage-tools__pager-chevron" />
+                <FiChevronRight className="frontpage-tools-pager-chevron" />
               </button>
             </div>
           </div>
 
           {activeTool && (
-            <div className="frontpage-tools__slideshow">
+            <div className="frontpage-tools-slideshow">
               <div
-                className="frontpage-tools__slide"
+                className="frontpage-tools-slide"
                 aria-live="polite"
               >
-                <div className="frontpage-tools__slide-icon">
+                <div className="frontpage-tools-slide-icon">
                   <activeTool.Icon
-                    className="frontpage-tools__slide-svg"
+                    className="frontpage-tools-slide-svg"
                     aria-hidden="true"
                   />
                 </div>
-                <div className="frontpage-tools__slide-content">
-                  <h3 className="frontpage-tools__slide-title">{activeTool.label}</h3>
-                  <p className="frontpage-tools__slide-text">{activeTool.description}</p>
-                  <p className="frontpage-tools__slide-text">{activeTool.purpose}</p>
-                  <p className="frontpage-tools__slide-text">{activeTool.usage}</p>
+                <div className="frontpage-tools-slide-content">
+                  <h3 className="frontpage-tools-slide-title">{activeTool.label}</h3>
+                  <p className="frontpage-tools-slide-text">{activeTool.description}</p>
+                  <p className="frontpage-tools-slide-text">{activeTool.purpose}</p>
+                  <p className="frontpage-tools-slide-text">{activeTool.usage}</p>
                 </div>
               </div>
             </div>

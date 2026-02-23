@@ -1,52 +1,62 @@
 import { SiLinkedin, SiGithub } from "react-icons/si";
+import Typewriter from "../writers/typewriter";
+import ContactForm from "../form/contactform";
 
 export default function FrontpageHero() {
   return (
-    <section className="frontpage-hero fade-in slide-up">
-      <article className="frontpage-hero__copy">
-        <h1 className="frontpage-hero__title">
-          Velkommen til mit portfolio
-        </h1>
-        <p>
-          Hej, Jeg er Jimmi Berg Larsen. Webudvikler under uddannelse, og
-          dette er mit portfolio.<br></br> Her kan du finde eksempler paa mine
+    <section className="frontpage-hero">
+      <article className="frontpage-hero-content">
+        <Typewriter
+          words={["Omhyggelig", "Hjælpsom", "Kreativ", "Passioneret", "Nysgerrig"]}
+          prefix="Som person er jeg: "
+        />
+        <h1 className="frontpage-hero-heading">Velkommen til mit portfolio</h1>
+        <p className="frontpage-hero-p">
+          Hej, Jeg er Jimmi Berg Larsen. Webudvikler under uddannelse, og dette
+          er mit portfolio.<br></br> Her kan du finde eksempler på mine
           projekter og faerdigheder.
         </p>
-        <p className="frontpage-hero__paragraph">
+        <p className="frontpage-hero-p">
           Jeg er passioneret omkring webudvikling og elsker at skabe
-          brugervenlige og aestetisk tiltalende webapplikationer.
+          brugervenlige og æstetisk tiltalende webapplikationer.
         </p>
-        <p className="frontpage-hero__paragraph">man kan foelge mig her:</p>
-        <ul className="frontpage-hero__social">
-          <li className="frontpage-hero__social-row">
+        <p className="frontpage-hero-p">Man kan følge mig her:</p>
+        <ul className="frontpage-hero-socialmedia">
+          <li className="frontpage-hero-socialmedia-row">
             <a
               href="https://www.linkedin.com/in/jimmi-larsen/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profil"
-              className="frontpage-hero__social-link frontpage-hero__social-link--linkedin"
+              className="link-style frontpage-hero-socialmedia-linkedin"
             >
-              <SiLinkedin className="frontpage-hero__social-icon" aria-hidden="true" />
-              <span className="frontpage-hero__social-label">LinkedIn</span>
+              <SiLinkedin
+                className="frontpage-hero-socialmedia-icon"
+                aria-hidden="true"
+              />
+              <span className="frontpage-hero-socialmedia-label">LinkedIn</span>
             </a>
             <a
               href="https://github.com/Saliandros"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub profil"
-              className="frontpage-hero__social-link frontpage-hero__social-link--github"
+              className="link-style frontpage-hero-socialmedia-github"
             >
-              <SiGithub className="frontpage-hero__social-icon" aria-hidden="true" />
-              <span className="frontpage-hero__social-label">GitHub</span>
+              <SiGithub
+                className="frontpage-hero-socialmedia-icon"
+                aria-hidden="true"
+              />
+              <span className="frontpage-hero-socialmedia-label">GitHub</span>
             </a>
           </li>
         </ul>
       </article>
 
       <img
-        src="/assets/image/Jimmi.jpg"
+        src="/assets/image/Jimmi.png"
         alt="Picture of Jimmi Berg Larsen"
-        className="frontpage-hero__image"
+        className="frontpage-hero-image"
       />
     </section>
   );
