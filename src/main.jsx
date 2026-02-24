@@ -16,6 +16,7 @@ import Page404 from "./pages/page404.jsx";
 /* project routes imports */
 import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
 import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
+import LineUp from "./pages/Projects/LineUp-side.jsx";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -36,6 +37,7 @@ root.render(
           {/* project routes */}
           <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
           <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
+          <Route path="/projects/lineup-side" element={<LineUp />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>

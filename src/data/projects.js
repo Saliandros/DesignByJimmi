@@ -16,4 +16,12 @@ export const projects = [
     link: "/projects/candidate-project",
     date: "29-01-2026",
   },
+      {
+    id: 3,
+    title: "LineUp - Semester 1",
+    description: "LineUp, var et projekt hvor vi skulle bruge alt hvad vi havde lært på første semester",
+    image: "/assets/image/projectimage/lineup.png",
+    link: "/projects/lineup-project",
+    date: "29-01-2026",
+  },
 ];
