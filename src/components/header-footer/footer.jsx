@@ -17,7 +17,7 @@ export default function Footer() {
                 className={`link-style hover-color navigation-link ${currentPath === "/projects" && "link-style-active"}`}
               >
                 <FiFolder className="navigation-icon" aria-hidden="true" />
-                Projects
+                Projekter
               </a>
             </li>
             <li>
@@ -35,7 +35,7 @@ export default function Footer() {
                 className={`link-style hover-color navigation-link ${currentPath === "/about" && "link-style-active"}`}
               >
                 <FiUser className="navigation-icon" aria-hidden="true" />
-                About
+                Om mig
               </a>
             </li>
             <li>
@@ -44,7 +44,7 @@ export default function Footer() {
                 className={`link-style hover-color navigation-link ${currentPath === "/contact" && "link-style-active"}`}
               >
                 <FiMail className="navigation-icon" aria-hidden="true" />
-                Contact
+                Kontakt
               </a>
             </li>
           </ul>
@@ -52,7 +52,7 @@ export default function Footer() {
       </section>
       <section className="footer-bottom">
         <p className="footer-text">
-          © 2024 DesignByJimmi. All rights reserved.
+          © 2024 DesignByJimmi. Alle rettigheder forbeholdes.
         </p>
         <p className="footer-text">
           Læs mere om vores&nbsp;

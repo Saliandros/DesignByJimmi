@@ -23,7 +23,7 @@ export default function Navigation() {
               className={`link-style hover-color navigation-link ${currentPath === "/projects" && "link-style-active"}`}
             >
               <FiFolder className="navigation-icon" aria-hidden="true" />
-              Projects
+              Projekter
             </a>
           </li>
           <li>
@@ -41,7 +41,7 @@ export default function Navigation() {
               className={`link-style hover-color navigation-link ${currentPath === "/about" && "link-style-active"}`}
             >
               <FiUser className="navigation-icon" aria-hidden="true" />
-              About
+              Om mig
             </a>
           </li>
           <li>
@@ -50,7 +50,7 @@ export default function Navigation() {
               className={`link-style hover-color navigation-link ${currentPath === "/contact" && "link-style-active"}`}
             >
               <FiMail className="navigation-icon" aria-hidden="true" />
-              Contact
+              Kontakt
             </a>
           </li>
         </ul>

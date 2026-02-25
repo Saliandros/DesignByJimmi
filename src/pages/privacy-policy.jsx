@@ -3,13 +3,13 @@ export default function PrivacyPolicy() {
     <main>
       <header className="cv-header">
         <div className="cv-header__inner">
-          <h1 className="cv-title">Privatlivspolitik</h1>
+          <h1 className="heading-1">Privatlivspolitik</h1>
         </div>
       </header>
 
       <article className="cv-body">
         <section className="cv-section cv-section-card">
-          <h2 className="cv-section-title">Om denne politik</h2>
+          <h2 className="heading-2">Om denne politik</h2>
           <p>
             Denne privatlivspolitik beskriver, hvordan jeg behandler dine
             personoplysninger på denne hjemmeside. Jeg er forpligtet til at
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="cv-section cv-section-card">
-          <h2 className="cv-section-title">Indsamling af data</h2>
+          <h2 className="heading-2">Indsamling af data</h2>
           <p>
             Jeg indsamler kun de oplysninger, der er nødvendige for at drive
             hjemmesiden. Dette kan omfatte:
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="cv-section cv-section-card">
-          <h2 className="cv-section-title">Brug af data</h2>
+          <h2 className="heading-2">Brug af data</h2>
           <p>Dine oplysninger bruges alene til at:</p>
           <ul className="cv-list">
             <li>Besvare dine henvendelser</li>
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="cv-section cv-section-card">
-          <h2 className="cv-section-title">Dine rettigheder</h2>
+          <h2 className="heading-2">Dine rettigheder</h2>
           <p>
             Du har ret til at anmode om adgang til, rettelse af eller sletning
             af dine personoplysninger. Du kan også tilbagetrække dit samtykke
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="cv-section cv-section-card">
-          <h2 className="cv-section-title">Kontakt</h2>
+          <h2 className="heading-2">Kontakt</h2>
           <p>
             Hvis du har spørgsmål til denne privatlivspolitik eller ønsker at
             udøve dine rettigheder, kan du kontakte mig via kontaktformularen.

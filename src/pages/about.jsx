@@ -5,7 +5,7 @@ export default function About() {
     <main>
       <article className="about-body">
         <section className="about-section about-section-primary">
-          <h2 className="about-section-title">Hvem er jeg?</h2>
+          <h2 className="heading-2">Hvem er jeg?</h2>
           <p className="about-profile-content">
             Jeg hedder Jimmi Berg Larsen og er en passioneret full-stack
             developer baseret i Horsens, Danmark. Mit fokus er på at skabe
@@ -16,7 +16,7 @@ export default function About() {
         </section>
 
         <section className="about-section about-section-card">
-          <h2 className="about-section-title">Min baggrund</h2>
+          <h2 className="heading-2">Min baggrund</h2>
           <p>
             Jeg har en bred baggrund inden for IT og design. Jeg startede med
             IT-support i 2015, skiftede til multimediedesign i 2023, og er nu
@@ -27,7 +27,7 @@ export default function About() {
         </section>
 
         <section className="about-section about-section-card">
-          <h2 className="about-section-title">Min tilgang</h2>
+          <h2 className="heading-2">Min tilgang</h2>
           <p>
             Jeg tror på at bygge software, der ikke kun fungerer, men også
             glæder brugerne. Jeg prioriterer:
@@ -41,14 +41,14 @@ export default function About() {
         </section>
 
         <section className="about-section about-section-card">
-          <h2 className="about-section-title">Tech stack</h2>
+          <h2 className="heading-2">Tech stack</h2>
           <p style={{ marginTop: "1rem", fontSize: "0.875rem" }}>
             Og meget mere! Se min CV for en fuld liste over mine færdigheder.
           </p>
         </section>
 
         <section className="about-section about-section-card">
-          <h2 className="about-section-title">Hvad laver jeg uden for arbejde?</h2>
+          <h2 className="heading-2">Hvad laver jeg uden for arbejde?</h2>
           <p>
             Når jeg ikke code'r, nyder jeg at være blandt mennesker. Jeg er
             aktiv medlem af fredagsbaren på min uddannelse, hvor jeg hjælper

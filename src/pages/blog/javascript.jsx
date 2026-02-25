@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Project() {
+export default function JavaScript() {
   return (
-    <section className="page-section">
-      <h1 className="heading-1">Projekt-side</h1>
+    <section className="blog-page">
+      <h1 className="heading-1">JavaScript-side</h1>
       <p>Dette er en basis projektside. Tilpas indholdet efter behov.</p>
     </section>
   );

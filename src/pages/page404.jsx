@@ -54,7 +54,7 @@ export default function Page404() {
   return (
     <main className="frontpage">
       <section>
-        <h2 className="frontpage-latest__title">404 - Side ikke fundet</h2>
+        <h2 className="heading-2">404 - Side ikke fundet</h2>
         {!isOnline ? (
           <p className="projects-description">
             Siden var ikke i stand til at levere den ønskede side. Tjek din internetforbindelse og prøv igen.

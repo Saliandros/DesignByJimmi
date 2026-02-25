@@ -68,7 +68,7 @@ export default function ProjectCard({ project, badgeNumber }) {
         loading="lazy"
       />
       <div className="project-card-content">
-        <h3 className="project-card-title">{project.title}</h3>
+        <h3 className="heading-3">{project.title}</h3>
         <p className="project-card-description">{project.description}</p>
       </div>
     </article>

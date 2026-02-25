@@ -14,9 +14,12 @@ import PrivacyPolicy from "./pages/privacy-policy.jsx";
 import Page404 from "./pages/page404.jsx";
 
 /* project routes imports */
-import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
-import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
-import LineUp from "./pages/Projects/LineUp-side.jsx";
+import PortfolioProject from "./pages/projects/portfolio-project.jsx";
+import MongoDBCondidate from "./pages/projects/candidate-project.jsx";
+import LineUp from "./pages/projects/lineup-project.jsx";
+
+/* blog routes imports */
+import JavaScript from "./pages/blog/javascript.jsx";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -25,7 +28,7 @@ root.render(
     <div className="app-shell">
       <Navigation />
 
-      <main className="app-shell__main">
+      <main className="app-shell-main">
         <Routes>
           <Route path="/" element={<Frontpage />} />
           <Route path="/projects" element={<Projects />} />
@@ -37,7 +40,10 @@ root.render(
           {/* project routes */}
           <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
           <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
-          <Route path="/projects/lineup-side" element={<LineUp />} />
+          <Route path="/projects/lineup-project" element={<LineUp />} />
+
+          {/* blog routes */}
+          <Route path="/blog/javascript" element={<JavaScript />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>
