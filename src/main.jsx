@@ -14,9 +14,9 @@ import PrivacyPolicy from "./pages/privacy-policy.jsx";
 import Page404 from "./pages/page404.jsx";
 
 /* project routes imports */
-import PortfolioProject from "./pages/projects/portfolio-project.jsx";
-import MongoDBCondidate from "./pages/projects/candidate-project.jsx";
-import LineUp from "./pages/projects/lineup-project.jsx";
+import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
+import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
+import LineUp from "./pages/Projects/lineup-project.jsx";
 
 /* blog routes imports */
 import JavaScript from "./pages/blog/javascript.jsx";
