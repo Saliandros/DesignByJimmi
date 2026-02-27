@@ -911,6 +911,17 @@ header {
   width: 1.25rem;
   height: 1.25rem;
 }
+.cv-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 14px;
+};
 
 .cv-entry {
   border-left: 4px solid var(--color-accent-active);
