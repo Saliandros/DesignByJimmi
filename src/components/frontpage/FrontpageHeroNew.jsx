@@ -7,36 +7,50 @@ export default function FrontpageHeroNew() {
       <div className="new-hero-text">
         <span className="new-hero-typewriter">
           <TypewriterSimple
-            words={["Omhyggelig", "Hjælpsom", "Kreativ", "Passioneret", "Nysgerrig"]}
+            words={[
+              "Omhyggelig",
+              "Hjælpsom",
+              "Kreativ",
+              "Passioneret",
+              "Nysgerrig",
+            ]}
             prefix="Som person er jeg: "
           />
         </span>
         <h1 className="new-hero-h1">Jimmi Larsen</h1>
         <h2 className="new-hero-h2">Webudvikler</h2>
-        <ul className="hero-socialmedia new-hero-socialmedia">
-          <li className="hero-socialmedia-row">
-            <a
-              href="https://www.linkedin.com/in/jimmi-larsen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn profil"
-              className="link-style hero-socialmedia-linkedin"
-            >
-              <SiLinkedin className="hero-socialmedia-icon" aria-hidden="true" />
-              <span className="hero-socialmedia-label">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/Saliandros"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profil"
-              className="link-style hero-socialmedia-github"
-            >
-              <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
-              <span className="hero-socialmedia-label">GitHub</span>
-            </a>
-          </li>
-        </ul>
+        <li className="hero-socialmedia-row hero-socialmedia new-hero-socialmedia">
+          <a
+            href="https://www.linkedin.com/in/jimmi-larsen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profil"
+            className="link-style hero-socialmedia-linkedin"
+          >
+            <SiLinkedin className="hero-socialmedia-icon" aria-hidden="true" />
+            <span className="hero-socialmedia-label">LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/Saliandros"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profil"
+            className="link-style hero-socialmedia-github"
+          >
+            <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
+            <span className="hero-socialmedia-label">GitHub</span>
+          </a>
+          <a
+            href="https://github.com/Saliandros"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profil"
+            className="link-style hero-socialmedia-github"
+          >
+            <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
+            <span className="hero-socialmedia-label">Candidate.dk</span>
+          </a>
+        </li>
       </div>
 
       <img
