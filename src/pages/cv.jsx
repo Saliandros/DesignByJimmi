@@ -33,11 +33,8 @@ export default function CV() {
     <>
       {showDownloadPopup && <div className="cv-popup">Downloader CV...</div>}
       <main>
-        <header className="cv-header"></header>
-
-        <article className="cv-body">
-          {/* Personal Info */}
-          <section className="cv-section cv-section-primary">
+        <section className="cv-blue-section">
+          <div className="cv-body">
             <h2 className="heading-2">Personlige oplysninger</h2>
             <figure className="cv-profile">
               <img
@@ -87,8 +84,10 @@ export default function CV() {
                 </button>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
+        <article className="cv-body">
           {/* Education */}
           <section className="cv-section cv-section-card">
             <h2 className="heading-2">Uddannelse</h2>
@@ -293,7 +292,6 @@ export default function CV() {
           </div>
         </section>
       </main>
-      );
     </>
   );
 }

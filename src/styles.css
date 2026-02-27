@@ -180,6 +180,131 @@ header {
   color: var(--color-text-secondary);
 }
 /* =========================================
+   New frontpage hero
+   ========================================= */
+.new-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8rem;
+  padding: 3rem 6rem 0;
+  background: var(--color-bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), 0 100%);
+  overflow: hidden;
+  min-height: 45vh;
+}
+
+.new-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: center;
+  padding-bottom: 4rem;
+}
+
+.new-hero-h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin: 0;
+  animation: hero-slide-left 0.8s ease-out both;
+}
+
+.new-hero-h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0;
+  animation: hero-slide-right 0.8s ease-out both;
+}
+
+.new-hero-image {
+  width: auto;
+  height: 580px;
+  align-self: flex-end;
+  object-fit: cover;
+  animation: hero-fade-up 0.6s ease-out 1.6s both;
+}
+
+.new-hero-typewriter {
+  display: block;
+  animation: hero-fade-up 0.6s ease-out 0.9s both;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.new-hero-typewriter .typewriter {
+  color: var(--color-text-secondary);
+}
+
+.new-hero-socialmedia {
+  animation: hero-fade-up 0.6s ease-out 1.6s both;
+}
+
+.new-hero .hero-socialmedia-label,
+.new-hero .hero-socialmedia-linkedin,
+.new-hero .hero-socialmedia-github {
+  color: var(--color-text-secondary);
+}
+
+@keyframes hero-slide-left {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+
+@keyframes hero-slide-right {
+  from { transform: translateX(100vw);  opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@media (max-width: 768px) {
+  .new-hero {
+    flex-direction: column;
+    padding: 4rem 1.5rem 8rem;
+    gap: 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+  }
+
+  .new-hero-h1 { font-size: 2.2rem; }
+  .new-hero-h2 { font-size: 1.4rem; }
+  .new-hero-image { width: 220px; }
+}
+
+/* =========================================
+   Frontpage bio section
+   ========================================= */
+.bio {
+  gap: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 6rem;
+}
+
+.bio .link-style {
+  color: var(--color-bg-primary);
+}
+
+.bio .link-style:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* =========================================
    Frontpage hero styles
    ========================================= */
 .hero {
@@ -628,9 +753,10 @@ header {
    Frontpage contact section
    ========================================= */
 .contact-section {
-  background: #5c1a8e;
+  background: linear-gradient(135deg, #5c1a8e 0%, #c86af0 100%);
   clip-path: polygon(0 8rem, 100% 0, 100% 100%, 0 100%);
   padding: 11rem 6rem 5rem;
+  margin-bottom: -2px;
 }
 
 .contact-grid {
@@ -719,12 +845,19 @@ header {
   overflow: auto;
 }
 .contact-form-button {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 2rem;
   border-radius: 8px;
-  border: none;
-  background: var(--color-accent);
+  border: 2px solid #111;
+  background: #111;
   color: #fff;
   cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-form-button:hover {
+  background: #fff;
+  color: #111;
 }
 .contact-form-error {
   color: #cc0000;
@@ -770,6 +903,61 @@ header {
 @media (max-width: 768px) {
   .contact-hero {
     padding: 2rem 1.5rem;
+  }
+}
+
+/* =========================================
+   CV blue section (Personlige oplysninger)
+   ========================================= */
+.cv-blue-section {
+  background: var(--color-bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), 0 100%);
+  padding: 2.5rem 0 11rem;
+  margin-bottom: -2px;
+  color: var(--color-text-secondary);
+}
+
+.cv-blue-section .heading-2,
+.cv-blue-section .cv-profile-heading,
+.cv-blue-section p,
+.cv-blue-section .cv-contact-address {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .cv-blue-section {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+    padding: 0 0 6rem;
+  }
+}
+
+/* =========================================
+   CV purple section
+   ========================================= */
+.cv-purple-section {
+  background: linear-gradient(135deg, #5c1a8e 0%, #c86af0 100%);
+  clip-path: polygon(0 0, 100% 8rem, 100% 100%, 0 100%);
+  padding: 3rem 0 5rem;
+  margin-bottom: -2px;
+}
+
+.cv-purple-section .heading-2,
+.cv-purple-section .heading-3,
+.cv-purple-section .cv-list li,
+.cv-purple-section .cv-entry-description,
+.cv-purple-section .cv-entry-meta,
+.cv-purple-section .cv-entry-role {
+  color: var(--color-text-secondary);
+}
+
+.cv-purple-section .cv-entry {
+  border-left-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .cv-purple-section {
+    clip-path: polygon(0 0, 100% 4rem, 100% 100%, 0 100%);
+    padding: 2rem 0 3rem;
   }
 }
 
@@ -891,20 +1079,21 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: var(--color-text-secondary);
+  color: #fff;
   background: var(--color-accent);
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-accent);
+  align-self: center;
+  width: fit-content;
   cursor: pointer;
   width: auto;
-  transition: box-shadow 0.2s ease, color 0.2s ease, background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .cv-download-button:hover {
-  background: var(--color-accent);
-  color: var(--color-text-primary);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: var(--color-accent);
 }
 
 .cv-download-icon {
@@ -1065,10 +1254,17 @@ header {
    ABOUT PAGE
    ========================================= */
 /* About — upgraded styling */
+.about-content-wrapper {
+  background: var(--color-bg-page);
+  clip-path: polygon(0 8rem, 100% 0, 100% 100%, 0 100%);
+  margin-top: -8rem;
+  padding-top: 6rem;
+}
+
 .about-body {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem;
+  padding: 4rem 1.5rem 3rem;
   color: var(--color-text-primary);
 }
 
@@ -1131,6 +1327,15 @@ header {
 /* Accessibility: ensure contrast for text inside cards */
 .about-section, .about-section-card {
   color: var(--color-text-primary);
+}
+
+.about-cv-link {
+  color: var(--color-bg-primary);
+  font-weight: 500;
+}
+
+.about-cv-link:hover {
+  color: var(--color-accent);
 }
 
 .search-wrapper {
@@ -1234,5 +1439,206 @@ header {
 .blog-group-date {
   font-size: 0.75rem;
   opacity: 0.5;
+}
+
+/* Typewriter */
+.typewriter {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  white-space: nowrap;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  opacity: 1;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor-pulse {
+  animation: cursor-blink 0.8s ease-in-out infinite;
+}
+
+/* Popup typewriter (old typewriter with hover) */
+.typewriter-hoverable {
+  position: relative;
+  cursor: default;
+}
+
+.typewriter-popup {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: linear-gradient(135deg, #5c1a8e 0%, #c86af0 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(92, 26, 142, 0.35);
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  z-index: 100;
+  min-width: 160px;
+  white-space: nowrap;
+}
+
+.typewriter-popup-item {
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  opacity: 0.9;
+}
+
+.typewriter-popup-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+}
+
+/* =========================================
+   PROJECT PAGE
+   ========================================= */
+.project-hero {
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  padding: 4rem 6rem 2rem;
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: minmax(auto, 480px) minmax(auto, 320px);
+  gap: 16rem;
+  align-items: start;
+  justify-content: center;
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  padding: 5rem 6rem 13rem;
+}
+
+.project-overview-about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-overview-about .heading-1 {
+  color: var(--color-text-secondary);
+}
+
+.project-overview-date {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+  margin-top: -1rem;
+}
+
+.project-overview-text {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.project-github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.project-github-link:hover {
+  color: var(--color-accent);
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.project-github-icon {
+  font-size: 1.3rem;
+}
+
+.project-overview-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-overview-image {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.project-overview-typewriter {
+  color: var(--color-text-secondary);
+  width: 16rem;
+}
+
+.project-overview-typewriter .typewriter {
+  color: var(--color-text-secondary);
+}
+
+/* Process section */
+.project-process {
+  padding: 10rem 6rem 5rem;
+  background: #f8f5ff;
+  color: var(--color-text-primary);
+  clip-path: polygon(0 8rem, 100% 0, 100% 100%, 0 100%);
+  margin-top: -8rem;
+}
+
+.project-process .heading-2 {
+  margin-bottom: 3rem;
+}
+
+.project-process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-process-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.project-process-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  opacity: 0.25;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 3rem;
+}
+
+.project-process-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-process-content p {
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .project-overview {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+  }
+
+  .project-process {
+    padding: 3rem 1.5rem;
+  }
 }
 

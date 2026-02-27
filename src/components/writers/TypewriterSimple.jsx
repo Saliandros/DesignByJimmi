@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-/**
- * Typewriter-effekt med valgfri prefix.
- * Eksempel på brug:
- * <Typewriter words={["React", "Angular"]} prefix="Programmets tech stack er: " />
- * Hvis prefix ikke angives, bruges "I Can: " som standard.
- */
-const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
+const TypewriterSimple = ({ words = [""], prefix = "I Can: " }) => {
   const [displayed, setDisplayed] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [hovered, setHovered] = useState(false);
-  const [pauseStep, setPauseStep] = useState(0); // 0 = ingen pause, 1-4 = sekunder
+  const [pauseStep, setPauseStep] = useState(0);
 
   useEffect(() => {
-    if (hovered) return; // Stop animation når man hover
     let timeout;
 
     if (!words.length) {
@@ -38,7 +30,6 @@ const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
           setCharIndex(charIndex + 1);
         }, 100);
       } else if (pauseStep < 3) {
-        // Vent 3 sekunder, opdater pauseStep hvert sekund
         timeout = setTimeout(() => {
           setPauseStep(pauseStep + 1);
         }, 1000);
@@ -62,14 +53,10 @@ const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
       }
     }
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, wordIndex, words, prefix, hovered, pauseStep]);
+  }, [charIndex, isDeleting, wordIndex, words, prefix, pauseStep]);
 
   return (
-    <span
-      className="typewriter typewriter-hoverable"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <span className="typewriter">
       {displayed}
       <span
         className={
@@ -82,15 +69,8 @@ const Typewriter = ({ words = [""], prefix = "I Can: " }) => {
       >
         |
       </span>
-      {hovered && words.length > 0 && (
-        <ul className="typewriter-popup">
-          {words.map((word, idx) => (
-            <li key={idx} className="typewriter-popup-item">{word}</li>
-          ))}
-        </ul>
-      )}
     </span>
   );
 };
 
-export default Typewriter;
+export default TypewriterSimple;
