@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectCard({ project, badgeNumber }) {
-  const [dragStart, setDragStart] = useState(null);
-  const [touchStart, setTouchStart] = useState(null);
+  const dragStart = useRef(null);
+  const touchStart = useRef(null);
   const navigate = useNavigate();
 
   const goToProject = () => {
@@ -18,31 +18,31 @@ export default function ProjectCard({ project, badgeNumber }) {
   };
 
   const handleMouseDown = (e) => {
-    setDragStart({ x: e.clientX, y: e.clientY });
+    dragStart.current = { x: e.clientX, y: e.clientY };
   };
 
   const handleMouseUp = (e) => {
-    if (!dragStart) return;
+    if (!dragStart.current) return;
     const dist = Math.sqrt(
-      Math.pow(e.clientX - dragStart.x, 2) + Math.pow(e.clientY - dragStart.y, 2)
+      Math.pow(e.clientX - dragStart.current.x, 2) + Math.pow(e.clientY - dragStart.current.y, 2)
     );
     if (dist < 10) goToProject();
-    setDragStart(null);
+    dragStart.current = null;
   };
 
   const handleTouchStart = (e) => {
     const t = e.touches[0];
-    setTouchStart({ x: t.clientX, y: t.clientY });
+    touchStart.current = { x: t.clientX, y: t.clientY };
   };
 
   const handleTouchEnd = (e) => {
-    if (!touchStart) return;
+    if (!touchStart.current) return;
     const t = e.changedTouches[0];
-    const dx = Math.abs(t.clientX - touchStart.x);
-    const dy = Math.abs(t.clientY - touchStart.y);
-    // Tap = minimal movement; swipe = horizontal movement > 10px
-    if (dx < 10 && dy < 10) goToProject();
-    setTouchStart(null);
+    const dx = Math.abs(t.clientX - touchStart.current.x);
+    const dy = Math.abs(t.clientY - touchStart.current.y);
+    // Tap = minimal movement; swipe = larger horizontal movement
+    if (dx < 20 && dy < 20) goToProject();
+    touchStart.current = null;
   };
 
   const handleKeyDown = (e) => {

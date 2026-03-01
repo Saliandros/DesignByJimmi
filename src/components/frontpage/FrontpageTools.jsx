@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { tools } from "../../data/tools.js";
 
@@ -6,27 +7,29 @@ export default function FrontpageTools() {
   const [activeToolIndex, setActiveToolIndex] = useState(0);
   const [isSlideHovering, setIsSlideHovering] = useState(false);
   const [toolsPerPage, setToolsPerPage] = useState(8);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const updateToolsPerPage = () => {
-      const nextPerPage = window.innerWidth <= 768 ? 6 : 8;
-      setToolsPerPage(nextPerPage);
+    const update = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      setToolsPerPage(mobile ? 6 : 8);
     };
 
-    updateToolsPerPage();
-    window.addEventListener("resize", updateToolsPerPage);
-    return () => window.removeEventListener("resize", updateToolsPerPage);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   useEffect(() => {
-    if (isSlideHovering || tools.length === 0) return;
+    if (isSlideHovering || isMobile || tools.length === 0) return;
 
     const interval = setInterval(() => {
       setActiveToolIndex((prevIndex) => (prevIndex + 1) % tools.length);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [isSlideHovering]);
+  }, [isSlideHovering, isMobile]);
 
   const toolsPageIndex = toolsPerPage === 0
     ? 0
@@ -123,17 +126,29 @@ export default function FrontpageTools() {
                 className="tools-slide"
                 aria-live="polite"
               >
-                <div className="tools-slide-icon">
-                  <activeTool.Icon
-                    className="tools-slide-svg"
-                    aria-hidden="true"
-                  />
+                <div className="tools-slide-header">
+                  <div className="tools-slide-icon">
+                    <activeTool.Icon
+                      className="tools-slide-svg"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="tools-slide-header-text">
+                    <h3 className="heading-3">{activeTool.label}</h3>
+                    <p className="tools-slide-subtitle">{activeTool.subtitle}</p>
+                  </div>
                 </div>
-                <div className="tools-slide-content">
-                  <h3 className="heading-3">{activeTool.label}</h3>
-                  <p className="tools-slide-text">{activeTool.description}</p>
-                  <p className="tools-slide-text">{activeTool.purpose}</p>
-                  <p className="tools-slide-text">{activeTool.usage}</p>
+                <div className="tools-slide-body">
+                  {activeTool.lines.map((line, i) => (
+                    <p key={i} className="tools-slide-text">{line}</p>
+                  ))}
+                </div>
+                <div className="tools-slide-links">
+                  {activeTool.links.map((link) => (
+                    <Link key={link.href} to={link.href} className="tools-slide-link">
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
