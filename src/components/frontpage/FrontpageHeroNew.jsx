@@ -15,6 +15,7 @@ export default function FrontpageHeroNew() {
               "Nysgerrig",
             ]}
             prefix="Som person er jeg: "
+            initialDelay={2200}
           />
         </span>
         <h1 className="new-hero-h1">Jimmi Larsen</h1>
