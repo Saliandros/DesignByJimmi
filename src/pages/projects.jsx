@@ -25,7 +25,7 @@ export default function Projects() {
 
     const blogMatches = blogs
       .filter((b) => b.title.toLowerCase().includes(lower))
-      .map((b) => ({ title: b.title, link: b.link, type: "Blog", date: b.date }));
+      .map((b) => ({ title: b.title, link: b.link, type: "Notat", date: b.date }));
 
     setSuggestions([...projectMatches, ...blogMatches]);
   }
@@ -48,9 +48,9 @@ export default function Projects() {
             type="text"
             value={query}
             onChange={handleChange}
-            placeholder="Søg i projekter og blogs..."
+            placeholder="Søg i projekter og notater..."
             className="search-input"
-            aria-label="Søg i projekter og blogs"
+            aria-label="Søg i projekter og notater"
           />
           {suggestions.length > 0 && (
             <ul className="search-suggestions">
@@ -67,26 +67,28 @@ export default function Projects() {
       </section>
       <AllProjects />
       <section className="blog-section">
-        <h2 className="heading-2">Blogs</h2>
-        {Object.entries(
-          blogs.reduce((acc, b) => {
-            (acc[b.type] = acc[b.type] || []).push(b);
-            return acc;
-          }, {})
-        ).map(([type, entries]) => (
-          <div key={type} className="blog-group">
-            <h3 className="heading-3 blog-group-title">{type}</h3>
-            <ul className="blog-group-list">
-              {entries.map((b) => (
-                <li key={b.id}>
-                  <Link to={b.link} className="blog-group-link">
-                    {b.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <h2 className="heading-2">Mine notater</h2>
+        <div className="blog-groups-wrapper">
+          {Object.entries(
+            blogs.reduce((acc, b) => {
+              (acc[b.type] = acc[b.type] || []).push(b);
+              return acc;
+            }, {})
+          ).map(([type, entries]) => (
+            <div key={type} className="blog-group">
+              <h3 className="heading-3 blog-group-title">{type}</h3>
+              <ul className="blog-group-list">
+                {entries.map((b) => (
+                  <li key={b.id}>
+                    <Link to={b.link} className="blog-group-link">
+                      {b.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );
