@@ -40,16 +40,6 @@ export default function FrontpageHeroNew() {
             <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
             <span className="hero-socialmedia-label">GitHub</span>
           </a>
-          <a
-            href="https://github.com/Saliandros"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profil"
-            className="link-style hero-socialmedia-github"
-          >
-            <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
-            <span className="hero-socialmedia-label">Candidate.dk</span>
-          </a>
         </li>
       </div>
 
