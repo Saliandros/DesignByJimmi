@@ -395,10 +395,12 @@ header::after {
 }
 
 .new-hero-text {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   align-self: center;
+  padding-top: 2em;
   padding-bottom: 4rem;
 }
 
@@ -428,15 +430,22 @@ header::after {
 }
 
 .new-hero-typewriter {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   animation: hero-fade-up 0.6s ease-out 0.9s both;
   color: var(--color-text-secondary);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(0.65rem, 2.8vw, 1rem);
+  height: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .new-hero-typewriter .typewriter {
   color: var(--color-text-secondary);
+  white-space: nowrap;
+  margin-bottom: 0;
 }
 
 .new-hero-socialmedia {
@@ -513,12 +522,6 @@ header::after {
 
   .new-hero-h1 { font-size: 1.9rem; }
   .new-hero-h2 { font-size: 1.2rem; }
-
-  .new-hero-typewriter {
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 100%;
-  }
 
   .new-hero-socialmedia .hero-socialmedia-row {
     flex-direction: row;
