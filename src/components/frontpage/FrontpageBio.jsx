@@ -16,7 +16,7 @@ export default function FrontpageBio() {
           færdigt produkt.
         </p>
         <p className="hero-p">
-          Læs mere om mig på <a href="/about" className="link-style">About</a>
+          Læs mere om mig på <a href="/about" className="link-style-body">About</a>
         </p>
       </article>
 

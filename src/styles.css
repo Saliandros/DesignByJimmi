@@ -35,6 +35,7 @@
 
     /* Links */
     --color-link: #f2e6ff;
+    --color-link-body: #8b27b3;
 
     /* Colors */
     --color-bg-primary: #1b1f26;
@@ -63,6 +64,20 @@ body {
   color: var(--color-text-primary);
 }
 
+main, header {
+  margin: 0;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell-main {
+  flex: 1;
+}
+
 .link-style {
   text-decoration: none;
   color: var(--color-link);
@@ -75,6 +90,41 @@ body {
   font-family: var(--font-family-accent);
   text-decoration: underline;
   color: var(--color-accent-active);
+}
+.link-style-body {
+  color: var(--color-link-body);
+  text-decoration: underline;
+}
+.link-style-body:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.button-primary {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  transition: background-color 0.2s ease;
+}
+.button-primary:hover {
+  background-color: var(--color-accent-active);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+.button-primary--accent {
+  background-color: var(--color-accent);
+}
+.button-primary--accent:hover {
+  background-color: var(--color-accent-active);
+}
+.page404-button-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 /* =========================================
@@ -127,6 +177,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-bg-primary);
 }
 .navigation-list {
   list-style: none;
@@ -179,6 +241,144 @@ header {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }
+
+/* =========================================
+   Hamburger & drawer
+   ========================================= */
+
+/* Burger-knap — skjult på desktop */
+.nav-burger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-logo);
+  padding: 0.25rem;
+  line-height: 0;
+}
+
+.nav-burger-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Overlay */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer */
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 65vw;
+  max-width: 280px;
+  height: 100dvh;
+  background: var(--color-bg-primary);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.25);
+}
+
+.nav-drawer--open {
+  transform: translateX(0);
+}
+
+/* Luk-knap */
+.nav-drawer-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-logo);
+  padding: 0.25rem;
+  line-height: 0;
+  margin-bottom: 2rem;
+}
+
+.nav-drawer-close-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* Links i drawer */
+.nav-drawer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(247, 241, 253, 0.08);
+  transition: color 0.2s ease;
+}
+
+.nav-drawer-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-drawer-link--active {
+  color: var(--color-accent);
+  font-family: var(--font-family-accent);
+}
+
+@media (max-width: 768px) {
+  /* Skjul desktop nav, vis burger */
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-burger {
+    display: block;
+  }
+
+  .nav-overlay {
+    display: block;
+  }
+
+  /* Footer mobil */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer .navigation-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
 /* =========================================
    New frontpage hero
    ========================================= */
@@ -207,6 +407,7 @@ header {
   font-weight: 700;
   color: var(--color-text-secondary);
   margin: 0;
+  white-space: nowrap;
   animation: hero-slide-left 0.8s ease-out both;
 }
 
@@ -265,16 +466,58 @@ header {
 
 @media (max-width: 768px) {
   .new-hero {
-    flex-direction: column;
-    padding: 4rem 1.5rem 8rem;
-    gap: 2rem;
-    text-align: center;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    padding: 3rem 1.5rem 6rem;
+    gap: 0;
+    text-align: left;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+    min-height: 52vh;
+    overflow: hidden;
   }
 
-  .new-hero-h1 { font-size: 2.2rem; }
-  .new-hero-h2 { font-size: 1.4rem; }
-  .new-hero-image { width: 220px; }
+  /* Gradient overlay — mørkt til venstre, transparent til højre */
+  .new-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--color-bg-primary) 25%,
+      rgba(27, 31, 38, 0.85) 50%,
+      rgba(27, 31, 38, 0.4) 75%,
+      transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .new-hero-text {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 65%;
+    padding-bottom: 0;
+  }
+
+  .new-hero-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 0;
+  }
+
+  .new-hero-h1 { font-size: 1.9rem; }
+  .new-hero-h2 { font-size: 1.2rem; }
+
+  .new-hero-socialmedia .hero-socialmedia-row {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
 }
 
 /* =========================================
@@ -288,19 +531,24 @@ header {
   padding: 4rem 6rem;
 }
 
-.bio .link-style {
-  color: var(--color-bg-primary);
-}
-
-.bio .link-style:hover {
-  color: var(--color-accent);
-}
 
 @media (max-width: 768px) {
   .bio {
     flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 1.5rem;
+    gap: 0;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .bio .hero-image {
+    order: -1;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .bio .hero-content {
+    padding-top: 0.75rem;
   }
 }
 
@@ -719,19 +967,58 @@ header {
 }
 
 @media (max-width: 768px) {
+  .projects-grid {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    );
+  }
+
   .projects-grid-list {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     list-style: none;
-    padding-left: 0;
+    padding: 0 1rem;
     margin: 0;
+  }
+
+  .projects-grid-list::-webkit-scrollbar {
+    display: none;
   }
 
   .page-section {
     padding: 2rem 1.5rem;
+  }
+
+  .newest-projects {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    );
   }
 
   .newest-projects-list {
@@ -739,10 +1026,15 @@ header {
     gap: 0.5rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     list-style: none;
-    padding-left: 0;
+    padding: 0 1rem;
     margin: 0;
+  }
+
+  .newest-projects-list::-webkit-scrollbar {
+    display: none;
   }
 }
 .contact-text {
@@ -884,6 +1176,10 @@ header {
   .contact-page-hero {
     padding: 2rem 1.5rem;
   }
+
+  .contact-form-button {
+    align-self: center;
+  }
 }
 
 .contact-hero {
@@ -1016,7 +1312,6 @@ header {
   height: 20rem;
   border-radius: 1rem;
   object-fit: cover;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
   margin: 0;
 }
@@ -1329,14 +1624,6 @@ header {
   color: var(--color-text-primary);
 }
 
-.about-cv-link {
-  color: var(--color-bg-primary);
-  font-weight: 500;
-}
-
-.about-cv-link:hover {
-  color: var(--color-accent);
-}
 
 .search-wrapper {
   position: relative;
@@ -1428,7 +1715,8 @@ header {
 .blog-group-list { gap: 0.4rem; }
 
 .blog-group-link {
-  color: #0066cc;
+  color: var(--color-link-body);
+  text-decoration: underline;
 }
 
 .blog-group-link:hover {
@@ -1634,11 +1922,108 @@ header {
 @media (max-width: 768px) {
   .project-overview {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 3rem 1.5rem;
+  }
+
+  .project-overview-media {
+    order: -1;
+  }
+
+  .project-overview-media .cv-profile-image {
+    width: 140px;
+    height: 175px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .project-overview-image {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .project-hero {
+    padding: 2rem 1.5rem;
   }
 
   .project-process {
     padding: 3rem 1.5rem;
   }
+
+  /* Tools */
+  .tools-panel {
+    margin: 0;
+  }
+
+  .tools-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Font-størrelse */
+  :root {
+    --font-size-xl: 1.9rem;
+    --font-size-lg: 1.5rem;
+  }
 }
 
+/* =========================================
+   Tablet breakpoint (1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 1.5rem;
+  }
+
+  .page-section {
+    padding: 3rem 2.5rem;
+  }
+
+  .new-hero {
+    padding: 3rem 3rem 0;
+    gap: 4rem;
+  }
+
+  .bio {
+    padding: 3rem 3rem;
+    gap: 4rem;
+  }
+
+  .contact-section {
+    padding: 9rem 3rem 4rem;
+  }
+
+  .tools-panel {
+    margin: 0 2rem;
+  }
+
+  .tools-content {
+    gap: 3rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-hero {
+    padding: 4rem 3rem 2rem;
+  }
+
+  .project-overview {
+    gap: 6rem;
+    padding: 5rem 3rem 10rem;
+  }
+
+  .project-process {
+    padding: 8rem 3rem 4rem;
+  }
+
+  .contact-page-hero,
+  .contact-hero {
+    padding: 3rem 2.5rem;
+  }
+}

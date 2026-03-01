@@ -1,49 +1,54 @@
 import { SiGithub } from "react-icons/si";
-import Typewriter from "../../components/writers/typewriter";
+import TypewriterSimple from "../../components/writers/TypewriterSimple";
 
 export default function PortfolioProject() {
   return (
     <main>
-      <section className="project-overview">
-        <div className="project-overview-about">
-          <h1 className="heading-1">Portfolio Website</h1>
-          <p className="project-overview-date">29. januar 2026</p>
-          <p className="project-overview-text">
-            Mit personlige portfolio website bygget fra bunden med React og
-            Vite. Siden fungerer som en showcase for mine projekter og
-            færdigheder, og er designet med fokus på brugervenlighed,
-            animationer og et rent visuelt udtryk.
-          </p>
-          <p className="project-overview-text">
-            Projektet har været en løbende læringsproces, hvor jeg har
-            eksperimenteret med CSS clip-path, keyframe-animationer og
-            komponentbaseret arkitektur.
-          </p>
-          <a
-            href="https://github.com/Saliandros/Saliandros.dk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-style project-github-link"
-          >
-            <SiGithub className="project-github-icon" aria-hidden="true" />
-            <span>Se på GitHub</span>
-          </a>
-        </div>
-
-        <div className="project-overview-media">
-          <img
-            src="/assets/image/Jimmi.webp"
-            alt="Portfolio Website"
-            className="cv-profile-image"
-          />
-          <div className="project-overview-typewriter">
-            <Typewriter
+      <section className="new-hero">
+        <div className="new-hero-text">
+          <span className="new-hero-typewriter">
+            <TypewriterSimple
               words={["React", "Vite", "CSS", "JavaScript", "React Router"]}
               prefix="Tech stack: "
             />
-
-          </div>
+          </span>
+          <h1 className="new-hero-h1">Portfolio Website</h1>
+          <h2 className="new-hero-h2">29. januar 2026</h2>
         </div>
+
+        <img
+          src="/assets/image/Jimmi.webp"
+          alt="Portfolio Website"
+          className="new-hero-image"
+        />
+      </section>
+
+      <section className="about-content-wrapper">
+        <article className="about-body">
+          <section className="about-section about-section-card">
+            <p className="project-overview-text">
+              Mit personlige portfolio website bygget fra bunden med React og
+              Vite. Siden fungerer som en showcase for mine projekter og
+              færdigheder, og er designet med fokus på brugervenlighed,
+              animationer og et rent visuelt udtryk.
+            </p>
+            <p className="project-overview-text" style={{ marginTop: "0.75rem" }}>
+              Projektet har været en løbende læringsproces, hvor jeg har
+              eksperimenteret med CSS clip-path, keyframe-animationer og
+              komponentbaseret arkitektur.
+            </p>
+            <a
+              href="https://github.com/Saliandros/Saliandros.dk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-style project-github-link"
+              style={{ marginTop: "1rem", display: "inline-flex" }}
+            >
+              <SiGithub className="project-github-icon" aria-hidden="true" />
+              <span>Se på GitHub</span>
+            </a>
+          </section>
+        </article>
       </section>
 
       <section className="project-process">

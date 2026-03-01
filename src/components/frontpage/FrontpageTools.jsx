@@ -9,7 +9,7 @@ export default function FrontpageTools() {
 
   useEffect(() => {
     const updateToolsPerPage = () => {
-      const nextPerPage = window.innerWidth <= 768 ? 4 : 8;
+      const nextPerPage = window.innerWidth <= 768 ? 6 : 8;
       setToolsPerPage(nextPerPage);
     };
 
@@ -95,24 +95,26 @@ export default function FrontpageTools() {
               })}
             </ul>
 
-            <div className="tools-pager">
-              <button
-                type="button"
-                className="tools-pager-button"
-                onClick={handleToolsPrev}
-                aria-label="Forrige vaerktoejer"
-              >
-                <FiChevronLeft className="tools-pager-chevron" />
-              </button>
-              <button
-                type="button"
-                className="tools-pager-button"
-                onClick={handleToolsNext}
-                aria-label="Naeste vaerktoejer"
-              >
-                <FiChevronRight className="tools-pager-chevron" />
-              </button>
-            </div>
+            {maxToolsPage > 0 && (
+              <div className="tools-pager">
+                <button
+                  type="button"
+                  className="tools-pager-button"
+                  onClick={handleToolsPrev}
+                  aria-label="Forrige vaerktoejer"
+                >
+                  <FiChevronLeft className="tools-pager-chevron" />
+                </button>
+                <button
+                  type="button"
+                  className="tools-pager-button"
+                  onClick={handleToolsNext}
+                  aria-label="Naeste vaerktoejer"
+                >
+                  <FiChevronRight className="tools-pager-chevron" />
+                </button>
+              </div>
+            )}
           </div>
 
           {activeTool && (
