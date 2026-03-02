@@ -1,5 +1,3 @@
-import TypewriterSimple from "../writers/TypewriterSimple";
-
 export default function FrontpageBio() {
   return (
     <section className="page-section bio">

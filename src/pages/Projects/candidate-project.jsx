@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function MongoDBCondidate() {
   return (
     <section className="page-section">

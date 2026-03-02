@@ -54,6 +54,15 @@
 }
 
 /* =========================================
+   Utility classes
+   ========================================= */
+.mt-05  { margin-top: 0.5rem; }
+.mt-075 { margin-top: 0.75rem; }
+.mt-1   { margin-top: 1rem; }
+.mt-125 { margin-top: 1.25rem; }
+.mt-15  { margin-top: 1.5rem; }
+
+/* =========================================
    Base styles
    ========================================= */
 
@@ -85,6 +94,9 @@ main, header {
 .link-style:hover {
   text-decoration: underline;
   color: var(--color-accent);
+}
+.hover-color {
+  transition: color 0.2s ease;
 }
 .link-style-active {
   font-family: var(--font-family-accent);
@@ -155,9 +167,7 @@ main, header {
 }
 
 /* Contextual overrides */
-.cv-section-primary .heading-2 { color: var(--color-text-secondary); }
 .project-card-content .heading-3 { color: var(--color-text-secondary); font-size: 1.125rem; margin-bottom: 0.25rem; }
-.cv-toggle .heading-2 { transition: color 0.2s ease; }
 
 /* =========================================
    Page section layout
@@ -202,6 +212,11 @@ header::after {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-md);
 }
+.navigation-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
 .heading-logo {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-lg);
@@ -233,10 +248,6 @@ header::after {
   align-items: center;
 }
 
-.footer-nav {
-  margin-left: auto;
-  gap: 2rem;
-}
 .footer-text {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
@@ -622,6 +633,7 @@ header::after {
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
   color: var(--color-text-primary);
+  text-align: left;
 }
 .hero-p {
   font-weight: var(--font-weight-md);
@@ -643,20 +655,6 @@ header::after {
 .hero-socialmedia-label {
   gap: 0.5rem;
   color: var(--color-text-primary);
-}
-.hero-socialmedia-linkedin {
-  color: blue;
-}
-.hero-socialmedia-github {
-  color: black;
-}
-.hero-socialmedia-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-md);
-  color: var(--color-link);
 }
 
 .hero-socialmedia-icon {
@@ -756,12 +754,6 @@ header::after {
    Frontpage tools styles
    ========================================= */
 
-.tools-panel {
-  width: 100%;
-  border-radius: 1.25rem;
-  padding: 0;
-  margin: 0 6rem;
-}
 
 
 .tools-content {
@@ -959,6 +951,7 @@ header::after {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
@@ -1017,6 +1010,7 @@ header::after {
 
   .tools-slide-text {
     -webkit-line-clamp: unset;
+    line-clamp: unset;
     display: block;
     overflow: visible;
   }
@@ -1138,10 +1132,6 @@ header::after {
     display: none;
   }
 }
-.contact-text {
-  text-align: left;
-}
-
 /* =========================================
    Frontpage contact section
    ========================================= */
@@ -1283,26 +1273,6 @@ header::after {
   }
 }
 
-.contact-hero {
-  padding: 4rem 6rem;
-}
-
-.contact-hero .contact-form-section {
-  margin-top: 0;
-  justify-content: flex-start;
-}
-
-.contact-hero .contact-form {
-  max-width: none;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .contact-hero {
-    padding: 2rem 1.5rem;
-  }
-}
-
 /* =========================================
    CV blue section (Personlige oplysninger)
    ========================================= */
@@ -1361,20 +1331,6 @@ header::after {
 /* =========================================
    CV PAGE
    ========================================= */
-.cv-header {
-  margin: 3rem auto 0;
-  padding: 0;
-  max-width: 64rem;
-}
-
-.cv-header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-
 .cv-body {
   max-width: 64rem;
   margin: 0 auto;
@@ -1385,11 +1341,6 @@ header::after {
   border-radius: 1.5rem;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.cv-section-primary {
-  background: var(--color-bg-primary);
-  color: var(--color-text-secondary);
 }
 
 .cv-section-hover {
@@ -1537,52 +1488,6 @@ header::after {
   gap: 1.5rem;
 }
 
-.cv-toggle {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-
-.cv-toggle-icon {
-  transition: transform 0.3s ease;
-}
-
-.cv-toggle-icon--open {
-  transform: rotate(180deg);
-}
-
-.cv-toggle-chevron {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--color-text-primary);
-}
-
-.cv-toggle-content {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-.cv-toggle-content--open {
-  max-height: 1000px;
-  opacity: 1;
-}
-
-.cv-toggle-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-
 .cv-list,
 .blog-group-list {
   list-style: none;
@@ -1672,52 +1577,8 @@ header::after {
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
-/* Profile paragraph */
-.about-profile-content {
-  color: var(--color-text-primary);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-/* List with accent bullets */
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: grid;
-  gap: 0.5rem;
-  grid-auto-flow: row;
-}
-
-/* Each list item: small accent dot */
-.about-list li {
-  position: relative;
-  padding-left: 1.25rem;
-  color: var(--color-text-primary);
-}
-.about-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.7rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: var(--color-accent);
-  box-shadow: 0 2px 6px rgba(200,106,240,0.25);
-}
-
-/* Two-column layout for wider screens */
 @media (min-width: 900px) {
   .about-body { padding: 3rem 2rem; }
-  .about-section-card.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    align-items: start;
-  }
-  .about-section-card.grid-2 .heading-2 { grid-column: 1 / -1; }
 }
 
 /* Accessibility: ensure contrast for text inside cards */
@@ -1844,11 +1705,6 @@ header::after {
   text-decoration: underline;
 }
 
-.blog-group-date {
-  font-size: 0.75rem;
-  opacity: 0.5;
-}
-
 /* Typewriter */
 .typewriter {
   font-size: 1rem;
@@ -1911,12 +1767,6 @@ header::after {
 /* =========================================
    PROJECT PAGE
    ========================================= */
-.project-hero {
-  background: var(--color-bg-primary);
-  color: var(--color-text-secondary);
-  padding: 4rem 6rem 2rem;
-}
-
 .project-overview {
   display: grid;
   grid-template-columns: minmax(auto, 480px) minmax(auto, 320px);
@@ -1948,6 +1798,7 @@ header::after {
 .project-overview-text {
   line-height: 1.7;
   opacity: 0.9;
+  margin-top: 0.75rem;
 }
 
 .project-github-link {
@@ -1956,7 +1807,7 @@ header::after {
   gap: 0.5rem;
   color: var(--color-text-secondary);
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .project-github-link:hover {

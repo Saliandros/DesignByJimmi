@@ -16,11 +16,11 @@ export default function PrivacyPolicy() {
             <p>
               Den dataansvarlige for denne hjemmeside er:
             </p>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               <strong>Jimmi Berg Larsen</strong><br />
               Kontakt via kontaktformularen på denne hjemmeside.
             </p>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               Denne politik er sidst opdateret den <strong>1. marts 2026</strong> og gælder
               for behandling af personoplysninger i forbindelse med besøg på
               saliandros.dk.
@@ -41,24 +41,24 @@ export default function PrivacyPolicy() {
           <section className="about-section about-section-card">
             <h2 className="heading-2">Hvilke oplysninger indsamles — og hvorfor?</h2>
 
-            <h3 className="heading-3" style={{ marginTop: "1rem" }}>1. Kontaktformular</h3>
+            <h3 className="heading-3 mt-1">1. Kontaktformular</h3>
             <p>
               Når du udfylder kontaktformularen, indsamles følgende oplysninger:
             </p>
-            <ul className="cv-list" style={{ marginTop: "0.5rem" }}>
+            <ul className="cv-list mt-05">
               <li>Fornavn og efternavn</li>
               <li>E-mailadresse</li>
               <li>Din besked</li>
             </ul>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               <strong>Formål:</strong> At besvare din henvendelse.
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Retsgrundlag:</strong> GDPR artikel 6, stk. 1, litra b (opfyldelse af en
               anmodning du selv har indsendt) samt litra f (legitim interesse i
               at kunne kommunikere med besøgende).
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Databehandler:</strong> Formularen sender dine oplysninger til
               tjenesten <strong>Formspree</strong> (formspree.io), som videresender
               beskeden til mig via e-mail. Formspree er en amerikansk virksomhed
@@ -74,35 +74,35 @@ export default function PrivacyPolicy() {
                 formspree.io/legal/privacy-policy
               </a>.
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Opbevaring:</strong> Dine oplysninger opbevares kun så længe det er
               nødvendigt for at besvare din henvendelse og er herefter ikke
               tilgængelige via hjemmesiden. Formspree opbevarer data i henhold
               til deres egne retningslinjer.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.5rem" }}>2. Server-logs (Netlify)</h3>
+            <h3 className="heading-3 mt-15">2. Server-logs (Netlify)</h3>
             <p>
               Hjemmesiden er hostet på <strong>Netlify</strong> (Netlify, Inc., USA).
               Netlify genererer automatisk server-logs ved hvert sidebesøg.
               Disse logs indeholder typisk:
             </p>
-            <ul className="cv-list" style={{ marginTop: "0.5rem" }}>
+            <ul className="cv-list mt-05">
               <li>IP-adresse</li>
               <li>Tidspunkt for besøget</li>
               <li>Den side der er besøgt</li>
               <li>Browser og styresystem (User-Agent)</li>
               <li>Henvisende hjemmeside (Referrer), hvis relevant</li>
             </ul>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               <strong>Formål:</strong> Driftssikkerhed, fejlfinding og beskyttelse mod
               misbrug.
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Retsgrundlag:</strong> GDPR artikel 6, stk. 1, litra f (legitim
               interesse i at sikre stabil og sikker drift af hjemmesiden).
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Opbevaring:</strong> Server-logs opbevares typisk i 30 dage og
               styres af Netlify. Du kan læse Netlifys privatlivspolitik på{" "}
               <a
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
               </a>.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.5rem" }}>3. Google Fonts</h3>
+            <h3 className="heading-3 mt-15">3. Google Fonts</h3>
             <p>
               Hjemmesiden bruger skrifttyper (Montserrat, Roboto Slab og Roboto)
               fra Googles skrifttypeservice, Google Fonts. Skrifttyperne
@@ -124,15 +124,15 @@ export default function PrivacyPolicy() {
               IP-adresse automatisk sendes til Google ved hvert sidebesøg —
               uanset om du interagerer med hjemmesiden eller ej.
             </p>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               <strong>Formål:</strong> Visuel præsentation af hjemmesiden med de valgte
               skrifttyper.
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Retsgrundlag:</strong> GDPR artikel 6, stk. 1, litra f (legitim
               interesse i at levere et visuelt konsistent design).
             </p>
-            <p style={{ marginTop: "0.5rem" }}>
+            <p className="mt-05">
               <strong>Datamodtager:</strong> Google LLC, USA. Google kan behandle data i
               USA, som er et tredjeland uden for EU/EØS. Overførslen sker i
               henhold til Googles{" "}
@@ -171,7 +171,7 @@ export default function PrivacyPolicy() {
               JavaScript for at fungere korrekt. Her er en oversigt over hvad
               JavaScript bruges til — og hvad det <em>ikke</em> bruges til:
             </p>
-            <ul className="cv-list" style={{ marginTop: "0.75rem" }}>
+            <ul className="cv-list mt-075">
               <li>
                 <strong>React (UI-bibliotek):</strong> Bruges til at bygge og opdatere
                 sidens indhold i browseren. Sender ingen data til eksterne
@@ -190,10 +190,10 @@ export default function PrivacyPolicy() {
                 til Formspree, kun når du aktivt trykker "Send".
               </li>
             </ul>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               Siden bruger <strong>ikke</strong>:
             </p>
-            <ul className="cv-list" style={{ marginTop: "0.5rem" }}>
+            <ul className="cv-list mt-05">
               <li>Cookies sat af siden selv</li>
               <li>localStorage eller sessionStorage til at gemme persondata</li>
               <li>Sporings- eller analysesoftware (f.eks. Google Analytics)</li>
@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
               Dine personoplysninger videregives ikke til tredjeparter med
               henblik på markedsføring eller salg. Oplysninger deles kun med:
             </p>
-            <ul className="cv-list" style={{ marginTop: "0.75rem" }}>
+            <ul className="cv-list mt-075">
               <li>
                 <strong>Formspree</strong> — som databehandler for
                 kontaktformularen
@@ -232,7 +232,7 @@ export default function PrivacyPolicy() {
                 led i hosting af hjemmesiden
               </li>
             </ul>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               Der overføres data til USA (Google, Formspree, Netlify). Overførslen sker
               på grundlag af EU's{" "}
               <a
@@ -258,7 +258,7 @@ export default function PrivacyPolicy() {
               database — de eneste persondata jeg selv besidder, er den
               e-mail der lander i min indbakke.
             </p>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               Det betyder at for størstedelen af rettighederne nedenfor skal
               du henvende dig direkte til de tredjeparter der rent faktisk
               opbevarer dine data — primært{" "}
@@ -282,7 +282,7 @@ export default function PrivacyPolicy() {
               Jeg besvarer alle henvendelser rettet til mig inden for 30 dage.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til indsigt (art. 15)</h3>
+            <h3 className="heading-3 mt-125">Ret til indsigt (art. 15)</h3>
             <p>
               Jeg kan give dig indsigt i den e-mail jeg har modtaget fra dig.
               For oplysninger opbevaret hos Formspree (formulardata) og
@@ -290,7 +290,7 @@ export default function PrivacyPolicy() {
               databehandlere og har deres egne procedurer for indsigtsanmodninger.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til berigtigelse (art. 16)</h3>
+            <h3 className="heading-3 mt-125">Ret til berigtigelse (art. 16)</h3>
             <p>
               Hvis den e-mail jeg har modtaget fra dig indeholder fejlagtige
               oplysninger, kan du kontakte mig og bede om at jeg noterer
@@ -298,7 +298,7 @@ export default function PrivacyPolicy() {
               dem direkte.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til sletning (art. 17)</h3>
+            <h3 className="heading-3 mt-125">Ret til sletning (art. 17)</h3>
             <p>
               Du kan anmode om at jeg sletter den e-mail jeg har modtaget fra
               dig. Det vil jeg gøre. For sletning af formulardata hos
@@ -308,7 +308,7 @@ export default function PrivacyPolicy() {
               efter 30 dage.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til begrænsning (art. 18)</h3>
+            <h3 className="heading-3 mt-125">Ret til begrænsning (art. 18)</h3>
             <p>
               Hvis du ønsker at begrænse behandlingen af dine oplysninger,
               kan du kontakte mig. I praksis vil det betyde at jeg ikke
@@ -317,7 +317,7 @@ export default function PrivacyPolicy() {
               direkte.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til dataportabilitet (art. 20)</h3>
+            <h3 className="heading-3 mt-125">Ret til dataportabilitet (art. 20)</h3>
             <p>
               Du kan anmode om at modtage den e-mail jeg har fra dig i et
               læsbart format. For selve formulardata skal du kontakte
@@ -325,7 +325,7 @@ export default function PrivacyPolicy() {
               oplysningerne. Denne ret gælder ikke for server-logs.
             </p>
 
-            <h3 className="heading-3" style={{ marginTop: "1.25rem" }}>Ret til indsigelse (art. 21)</h3>
+            <h3 className="heading-3 mt-125">Ret til indsigelse (art. 21)</h3>
             <p>
               Du kan gøre indsigelse mod behandling baseret på legitim
               interesse (art. 6, stk. 1, litra f) — det gælder Netlifys
@@ -344,7 +344,7 @@ export default function PrivacyPolicy() {
               med GDPR, har du ret til at indgive en klage til
               Datatilsynet — den danske tilsynsmyndighed for databeskyttelse:
             </p>
-            <p style={{ marginTop: "0.75rem" }}>
+            <p className="mt-075">
               <strong>Datatilsynet</strong><br />
               Carl Jacobsens Vej 35<br />
               2500 Valby<br />

@@ -32,7 +32,7 @@ export default function PortfolioProject() {
               færdigheder, og er designet med fokus på brugervenlighed,
               animationer og et rent visuelt udtryk.
             </p>
-            <p className="project-overview-text" style={{ marginTop: "0.75rem" }}>
+            <p className="project-overview-text">
               Projektet har været en løbende læringsproces, hvor jeg har
               eksperimenteret med CSS clip-path, keyframe-animationer og
               komponentbaseret arkitektur.
@@ -42,7 +42,6 @@ export default function PortfolioProject() {
               target="_blank"
               rel="noopener noreferrer"
               className="link-style project-github-link"
-              style={{ marginTop: "1rem", display: "inline-flex" }}
             >
               <SiGithub className="project-github-icon" aria-hidden="true" />
               <span>Se på GitHub</span>

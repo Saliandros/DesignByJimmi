@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const TypewriterSimple = ({ words = [""], prefix = "I Can: ", initialDelay = 0 }) => {
   const [ready, setReady] = useState(initialDelay === 0);

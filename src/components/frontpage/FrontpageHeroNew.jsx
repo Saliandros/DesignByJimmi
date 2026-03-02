@@ -8,13 +8,13 @@ export default function FrontpageHeroNew() {
         <span className="new-hero-typewriter">
           <TypewriterSimple
             words={[
-              "Omhyggelig",
-              "Hjælpsom",
-              "Kreativ",
-              "Passioneret",
-              "Nysgerrig",
+              "UX/UI-design",
+              "React",
+              "Databaser",
+              "IT-sikkerhed",
+              "Webudvikling",
             ]}
-            prefix="Som person er jeg: "
+            prefix="Skal vi lave: "
             initialDelay={2200}
           />
         </span>
