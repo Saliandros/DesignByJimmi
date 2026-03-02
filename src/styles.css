@@ -1006,6 +1006,7 @@ header::after {
 
   .tools-slide {
     padding: 1.25rem;
+    height: auto;
   }
 
   .tools-slide-text {
