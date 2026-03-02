@@ -14,9 +14,9 @@ export const tools = [
     Icon: SiReact,
     subtitle: "JavaScript-bibliotek",
     lines: [
-      "JavaScript-bibliotek til opbygning af brugerflader.",
-      "Arbejder med komponenter, state, props og hooks.",
-      "Brugt til at bygge denne portfolio fra bunden.",
+      "Jeg lærte React på Webudvikerlen.",
+      "React i kombination med en router-teknologi har vi brugt til at lave SPA'er.",
+      "Men det kan meget mere, denne side er eks bygget på React.",
     ],
     links: [
       { label: "Portfolio Website", href: "/projects/portfolio-project" },
@@ -27,9 +27,9 @@ export const tools = [
     Icon: SiJavascript,
     subtitle: "Kodesprog",
     lines: [
-      "Sproget der driver interaktivitet i browseren.",
-      "Bruges til logik, DOM-manipulation og API-kald.",
-      "Grundlaget for alt jeg bygger på nettet.",
+      "Igennem min Multimediedesigner lærte vi JavaScript.",
+      "Vi brugte det til at programmer interaktivitet ind på siderne.",
+      "Her i blandt Microinteractions.",
     ],
     links: [
       { label: "JavaScript Blog", href: "/blog/javascript" },
@@ -40,9 +40,9 @@ export const tools = [
     Icon: SiNodedotjs,
     subtitle: "Server-runtime",
     lines: [
-      "JavaScript runtime der kører på serveren.",
-      "Bruges til backend, tooling og scripts.",
-      "Bruges til lokale scripts og build tools.",
+      "Node.js har vi brugt til backend-udvikling trods denne side ikke har en.",
+      "Jeg har både brugt det til at starte Java Scripts op, men også kørt.",
+      "Server-side kode med Express.js oven på for routes.",
     ],
     links: [],
   },
@@ -51,9 +51,9 @@ export const tools = [
     Icon: SiPostgresql,
     subtitle: "SQL-database",
     lines: [
-      "Relationsdatabase med fuld SQL-understøttelse.",
-      "Bruges til struktureret data og komplekse queries.",
-      "Arbejdet med CRUD i skoleprojekter.",
+      "Det brugte vi til skoleprojekter hvor vi skulle arbejde med relationelle databaser.",
+      "Et eks kunne være da vi skulle lave vores chatbot, her brugte vi det til",
+      "at gemme og hente chattråde. ellers var det også brugt i LineUp-projektet.",
     ],
     links: [],
   },
@@ -62,9 +62,9 @@ export const tools = [
     Icon: SiMongodb,
     subtitle: "NoSQL-database",
     lines: [
-      "Dokumentbaseret database med fleksibelt schema.",
-      "Bruges til data-modeller og REST API'er.",
-      "Brugt i Condidate.dk-projektet.",
+      "Dokumentbaseret database hvor alle regler smides på jorden",
+      "Dette var fundamentet på vores candidate-projekt, hvor jeg sad med",
+      "Mongoose og MongoDB som hovedfokus, da jeg gerne ville dygtiggøre mig i det",
     ],
     links: [
       { label: "MongoDB — Condidate.dk", href: "/projects/candidate-project" },
@@ -75,9 +75,9 @@ export const tools = [
     Icon: SiWordpress,
     subtitle: "CMS",
     lines: [
-      "Content management system til websites.",
-      "Bruges til at oprette og administrere indhold.",
-      "Bygget og tilpasset WordPress-sites.",
+      "Er i teorien selvlært, men vi havde det også på Multimediedesigneren.",
+      "Jeg lærte til det da jeg fik lov at prøve at lave en side til en Guild jeg var i.",
+      "I dag kan jeg godt lide at blande JavaScript og WordPress sammen, for at undgå betalte løsninger.",
     ],
     links: [],
   },
@@ -86,11 +86,11 @@ export const tools = [
     Icon: SiFigma,
     subtitle: "Designværktøj",
     lines: [
-      "Design- og prototypingsværktøj til UI.",
-      "Bruges til wireframes og UI-mockups.",
-      "Skitserer layout og komponenter inden kodning.",
+      "Jeg lærte Figma at kende under Datamatikeren til mockups.",
+      "På multimediedesigneren brugte vi det til at skabe wireframes og prototyper.",
+      "Og på Webudvikleren brugte vi Figma' devtool til designet under LineUp-projektet.",
     ],
-    links: [{ label: "Figma — Condidate.dk", href: "/projects/candidate-project" },
+    links: [{ label: "LineUp Project", href: "/projects/lineup-project" },
     ],
   },
 ];

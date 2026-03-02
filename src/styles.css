@@ -1725,6 +1725,14 @@ header::after {
   color: var(--color-text-primary);
 }
 
+.about-cat-image {
+  width: 16rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
 
 .search-wrapper {
   position: relative;
