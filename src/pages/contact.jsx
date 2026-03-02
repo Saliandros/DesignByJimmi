@@ -5,10 +5,9 @@ export default function Contact() {
     <>
       <section className="contact-page-hero">
         <div className="contact-page-hero-content">
-          <h1 className="heading-1">Kontakt mig</h1>
+          <h1 className="heading-1">Har du et spørgsmål, jeg lover at svare tilbage.</h1>
           <p className="hero-p">
-            Har du et spørgsmål, et projekt i tankerne, eller vil du bare sige hej?<br />
-            Jeg hører gerne fra dig — udfyld formularen herunder, så vender jeg tilbage hurtigst muligt.
+            Jeg er altid åben for nye muligheder og samarbejder. Hvis du har et projekt i tankerne, eller bare vil sige hej, så tøv ikke med at kontakte mig!
           </p>
         </div>
       </section>
