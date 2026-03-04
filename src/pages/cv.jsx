@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export default function CV() {
   const downloadUrl =
-    "https://drive.google.com/uc?export=download&id=1vQTqQa0V4KQv-bELjAdvw20GBcZFUhab";
+    "https://drive.google.com/uc?export=download&id=1oKt8fdTqrKXsRva7SJl0s8OijfNoYKOA";
 
   const [previousEducationOpen, setPreviousEducationOpen] = useState(false);
   const [showDownloadPopup, setShowDownloadPopup] = useState(false);
@@ -45,14 +45,23 @@ export default function CV() {
               <figcaption className="cv-profile-content">
                 <p className="cv-profile-heading">Om mig</p>
                 <p>
-                  Jeg er i gang som professionsbachelor i webudvikling på Aarhus
-                  Erhvervesakademi, hvor jeg arbejder med React, JavaScript, CSS
-                  og meget mere. Som full-stack developer har jeg også kendskab
-                  til backend med Node.js & Express samt databaser som NoSQL og
-                  SQL. Før webudvikling har jeg færdiggjort multimediedesigner,
-                  som har givet mig erfaring med digital design. Jeg har også
-                  færdiggjort IT-supporter, som har givet mig erfaring med
-                  PowerShell samt netværk.
+                  Jeg er i gang som professionsbachelor i{" "}
+                  <strong>webudvikling</strong> på Aarhus Erhvervsakademi, hvor
+                  man på studiet
+                  arbejder med <strong>Frontend</strong>,{" "}
+                  <strong>Backend</strong> og <strong>Databaser</strong>. Jeg
+                  har kendskab til <strong>React</strong>,{" "}
+                  <strong>JavaScript</strong>, <strong>Node.js</strong>,{" "}
+                  <strong>Express</strong> og meget mere, og er altid åbent for
+                  at lære mere.
+                </p>
+                <p style={{ marginTop: "0.75rem" }}>
+                  For at kunne læse <strong>webudvikling</strong> har jeg
+                  færdiggjort <strong>multimediedesigner</strong>, som har givet
+                  mig erfaring med digital design. Jeg har også uddannelsen{" "}
+                  <strong>IT-supporter</strong>, hvilket har givet mig erfaring
+                  med Software, jeg er derfor ret
+                  hurtig til at sætte mig ind i dem.
                 </p>
               </figcaption>
             </figure>
@@ -224,7 +233,7 @@ export default function CV() {
                   <li>Engelsk - Flydende</li>
                 </ul>
               </div>
-              <div>
+              <div style={{ marginTop: "1rem" }}>
                 <h3 className="heading-3">Skriftligt kendskab</h3>
                 <ul className="cv-list">
                   <li>Norsk</li>
