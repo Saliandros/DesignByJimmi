@@ -4,8 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navigation from "./components/header-footer/navigation.jsx";
 import Footer from "./components/header-footer/footer.jsx";
+import Frontpage from "./pages/frontpage.jsx";
 
-const Frontpage = lazy(() => import("./pages/frontpage.jsx"));
+
 const Projects = lazy(() => import("./pages/projects.jsx"));
 const About = lazy(() => import("./pages/about.jsx"));
 const CV = lazy(() => import("./pages/cv.jsx"));
