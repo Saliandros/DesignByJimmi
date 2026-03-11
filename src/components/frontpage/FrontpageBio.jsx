@@ -22,6 +22,7 @@ export default function FrontpageBio() {
         src="/assets/image/Jimmi.webp"
         alt="Billede af Jimmi Berg Larsen"
         className="hero-image"
+        loading={window.matchMedia("(max-width: 768px)").matches ? "lazy" : "eager"}
       />
     </section>
   );

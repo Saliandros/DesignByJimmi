@@ -48,6 +48,7 @@ export default function FrontpageHeroNew() {
         src="/assets/image/Jimmi.webp"
         alt="Billede af Jimmi Berg Larsen"
         className="new-hero-image"
+        fetchpriority="high"
       />
     </section>
   );

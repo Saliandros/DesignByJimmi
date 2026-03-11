@@ -3,6 +3,11 @@ import ContactForm from "../components/form/contactform.jsx";
 export default function Contact() {
   return (
     <>
+      <div className="contact-banner">
+        <img src="/assets/image/signin.webp" alt="" className="contact-banner-image" />
+        <div className="contact-banner-overlay" />
+      </div>
+
       <section className="contact-page-hero">
         <div className="contact-page-hero-content">
           <h1 className="heading-1">Har du et spørgsmål, jeg lover at svare tilbage.</h1>
