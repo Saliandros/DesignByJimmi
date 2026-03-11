@@ -560,11 +560,7 @@ header::after {
   }
 
   .bio .hero-image {
-    order: -1;
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
-    object-position: top center;
+    display: none;
   }
 
   .bio .hero-content {
@@ -1526,9 +1522,7 @@ header::after {
    CV PAGE
    ========================================= */
 .cv-body {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0 0 1.5rem;
+  padding: 0 4rem 1.5rem;
 }
 
 .cv-section {
@@ -1764,7 +1758,7 @@ header::after {
   }
 
   .cv-body {
-    padding: 0 1rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
   }
 
   .cv-section {
@@ -1807,9 +1801,7 @@ header::after {
 }
 
 .about-body {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: 4rem 4rem 3rem;
   color: var(--color-text-primary);
 }
 
@@ -1821,8 +1813,8 @@ header::after {
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
-@media (min-width: 900px) {
-  .about-body { padding: 3rem 2rem; }
+@media (max-width: 768px) {
+  .about-body { padding: 2rem 1.5rem; }
 }
 
 /* Accessibility: ensure contrast for text inside cards */
