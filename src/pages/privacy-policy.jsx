@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
   return (
-    <main>
+    <>
       <section className="new-hero">
         <div className="new-hero-text">
           <h1 className="new-hero-h1">Privatlivspolitik</h1>
@@ -373,6 +373,6 @@ export default function PrivacyPolicy() {
 
         </article>
       </section>
-    </main>
+    </>
   );
 }

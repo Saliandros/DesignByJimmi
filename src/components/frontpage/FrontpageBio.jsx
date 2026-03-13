@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function FrontpageBio() {
   return (
     <section className="page-section bio">
@@ -14,7 +16,7 @@ export default function FrontpageBio() {
           mit portfolio, hvor man kan se de programmer jeg har lavet.
         </p>
         <p className="hero-p">
-          Læs mere om mig på <a href="/about" className="link-style-body">About</a>
+          Læs mere om mig på <Link to="/about" className="link-style-body">About</Link>
         </p>
       </article>
 

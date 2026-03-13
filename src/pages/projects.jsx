@@ -37,7 +37,7 @@ export default function Projects() {
   }
 
   return (
-    <main className="frontpage">
+    <div className="frontpage">
       <section className="page-section">
         <h2 className="heading-2">Alle projekter</h2>
         <p className="projects-description">
@@ -90,6 +90,6 @@ export default function Projects() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

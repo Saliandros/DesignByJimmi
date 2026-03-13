@@ -1,51 +1,58 @@
 import { FiFolder, FiFileText, FiUser, FiMail } from "react-icons/fi";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Footer() {
-  const currentPath = window.location.pathname;
-
   return (
     <footer className="footer">
       <section className="footer-top">
         <p className="heading-logo">
-          <a href="/">DesignByJimmi</a>
+          <Link to="/">DesignByJimmi</Link>
         </p>
         <nav className="navigation">
           <ul className="navigation-list">
             <li>
-              <a
-                href="/projects"
-                className={`link-style hover-color navigation-link ${currentPath === "/projects" && "link-style-active"}`}
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  `link-style hover-color navigation-link${isActive ? " link-style-active" : ""}`
+                }
               >
                 <FiFolder className="navigation-icon" aria-hidden="true" />
                 Projekter
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/cv"
-                className={`link-style hover-color navigation-link ${currentPath === "/cv" && "link-style-active"}`}
+              <NavLink
+                to="/cv"
+                className={({ isActive }) =>
+                  `link-style hover-color navigation-link${isActive ? " link-style-active" : ""}`
+                }
               >
                 <FiFileText className="navigation-icon" aria-hidden="true" />
                 Mit CV
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/about"
-                className={`link-style hover-color navigation-link ${currentPath === "/about" && "link-style-active"}`}
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `link-style hover-color navigation-link${isActive ? " link-style-active" : ""}`
+                }
               >
                 <FiUser className="navigation-icon" aria-hidden="true" />
                 Om mig
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/contact"
-                className={`link-style hover-color navigation-link ${currentPath === "/contact" && "link-style-active"}`}
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `link-style hover-color navigation-link${isActive ? " link-style-active" : ""}`
+                }
               >
                 <FiMail className="navigation-icon" aria-hidden="true" />
                 Kontakt
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -56,9 +63,9 @@ export default function Footer() {
         </p>
         <p className="footer-text">
           Læs mere om vores&nbsp;
-          <a href="/privacy-policy" className="link-style hover-color">
+          <Link to="/privacy-policy" className="link-style hover-color">
             Privatlivspolitik
-          </a>
+          </Link>
         </p>
       </section>
     </footer>

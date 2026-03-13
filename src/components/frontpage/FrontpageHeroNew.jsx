@@ -20,32 +20,36 @@ export default function FrontpageHeroNew() {
         </span>
         <h1 className="new-hero-h1">Jimmi Larsen</h1>
         <h2 className="new-hero-h2">Webudvikler</h2>
-        <li className="hero-socialmedia-row hero-socialmedia new-hero-socialmedia">
-          <a
-            href="https://www.linkedin.com/in/jimmi-larsen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profil"
-            className="link-style hero-socialmedia-linkedin"
-          >
-            <SiLinkedin className="hero-socialmedia-icon" aria-hidden="true" />
-            <span className="hero-socialmedia-label">LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/Saliandros"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub profil"
-            className="link-style hero-socialmedia-github"
-          >
-            <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
-            <span className="hero-socialmedia-label">GitHub</span>
-          </a>
-        </li>
+        <ul className="hero-socialmedia-row hero-socialmedia new-hero-socialmedia">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jimmi-larsen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profil"
+              className="link-style hero-socialmedia-linkedin"
+            >
+              <SiLinkedin className="hero-socialmedia-icon" aria-hidden="true" />
+              <span className="hero-socialmedia-label">LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Saliandros"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profil"
+              className="link-style hero-socialmedia-github"
+            >
+              <SiGithub className="hero-socialmedia-icon" aria-hidden="true" />
+              <span className="hero-socialmedia-label">GitHub</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <img
-        src="/assets/image/Jimmi.webp"
+        src="/assets/image/HERO.webp"
         alt="Billede af Jimmi Berg Larsen"
         className="new-hero-image"
         fetchpriority="high"

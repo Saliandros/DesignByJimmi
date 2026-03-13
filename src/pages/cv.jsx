@@ -5,7 +5,16 @@ import {
   FiPhone,
   FiMapPin,
 } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import PageSidebar from "../components/PageSidebar.jsx";
+
+const sidebarItems = [
+  { label: "Uddannelse", href: "#uddannelse" },
+  { label: "Arbejdserfaring", href: "#arbejdserfaring" },
+  { label: "Fritid", href: "#fritid" },
+  { label: "Sprog", href: "#sprog" },
+  { label: "Færdigheder", href: "#faerdigheder" },
+];
 
 export default function CV() {
   const downloadUrl =
@@ -13,6 +22,23 @@ export default function CV() {
 
   const [previousEducationOpen, setPreviousEducationOpen] = useState(false);
   const [showDownloadPopup, setShowDownloadPopup] = useState(false);
+  const purpleRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!purpleRef.current) return;
+      const purpleTop = purpleRef.current.getBoundingClientRect().top;
+      const links = document.querySelectorAll(".cv-grid-layout .page-sidebar-link");
+      links.forEach((link) => {
+        const { top, bottom } = link.getBoundingClientRect();
+        const mid = (top + bottom) / 2;
+        link.classList.toggle("page-sidebar-link--on-purple", mid >= purpleTop);
+      });
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleDownloadPDF = () => {
     setShowDownloadPopup(true);
@@ -32,25 +58,40 @@ export default function CV() {
   return (
     <>
       {showDownloadPopup && <div className="cv-popup">Downloader CV...</div>}
-      <main>
-        <section className="cv-blue-section">
+      <section className="cv-blue-section">
           <div className="cv-body">
             <h2 className="heading-2">Personlige oplysninger</h2>
-            <figure className="cv-profile">
-              <img
-                src="/assets/image/Jimmi.webp"
-                alt="Profilbillede"
-                className="cv-profile-image"
-              />
-              <figcaption className="cv-profile-content">
+            <div className="cv-header-columns">
+              <div className="cv-header-left">
+                <img
+                  src="/assets/image/HERO.webp"
+                  alt="Profilbillede"
+                  className="cv-profile-image"
+                />
+                <address className="cv-contact-address">
+                  <p className="cv-contact-row">
+                    <FiUser className="cv-contact-icon" aria-hidden="true" />
+                    Jimmi Berg Larsen
+                  </p>
+                  <p className="cv-contact-row">
+                    <FiPhone className="cv-contact-icon" aria-hidden="true" />
+                    +45 30 53 64 14
+                  </p>
+                  <p className="cv-contact-row">
+                    <FiMapPin className="cv-contact-icon" aria-hidden="true" />
+                    Kollegievænget 3, 8700 Horsens
+                  </p>
+                </address>
+              </div>
+              <div className="cv-header-right">
                 <p className="cv-profile-heading">Om mig</p>
                 <p>
                   Jeg er i gang som professionsbachelor i{" "}
                   <strong>webudvikling</strong> på Aarhus Erhvervsakademi, hvor
-                  man på studiet
-                  arbejder med <strong>Frontend</strong>,{" "}
-                  <strong>Backend</strong> og <strong>Databaser</strong>. Jeg
-                  har kendskab til <strong>React</strong>,{" "}
+                  man på studiet arbejder med <strong>Frontend</strong>,{" "}
+                  <strong>Backend</strong> og <strong>Databaser</strong>.
+                  <br />
+                  Jeg har kendskab til <strong>React</strong>,{" "}
                   <strong>JavaScript</strong>, <strong>Node.js</strong>,{" "}
                   <strong>Express</strong> og meget mere, og er altid åbent for
                   at lære mere.
@@ -58,47 +99,35 @@ export default function CV() {
                 <p style={{ marginTop: "0.75rem" }}>
                   For at kunne læse <strong>webudvikling</strong> har jeg
                   færdiggjort <strong>multimediedesigner</strong>, som har givet
-                  mig erfaring med digital design. Jeg har også uddannelsen{" "}
+                  mig erfaring med digital design.
+                  <br />
+                  Jeg har også uddannelsen{" "}
                   <strong>IT-supporter</strong>, hvilket har givet mig erfaring
-                  med Software, jeg er derfor ret
-                  hurtig til at sætte mig ind i dem.
+                  med Software, jeg er derfor ret hurtig til at sætte mig ind i
+                  dem.
                 </p>
-              </figcaption>
-            </figure>
-            <div className="cv-contact">
-              <address className="cv-contact-address">
-                <p className="cv-contact-row">
-                  <FiUser className="cv-contact-icon" aria-hidden="true" />
-                  Jimmi Berg Larsen
-                </p>
-                <p className="cv-contact-row">
-                  <FiPhone className="cv-contact-icon" aria-hidden="true" />
-                  +45 30 53 64 14
-                </p>
-                <p className="cv-contact-row">
-                  <FiMapPin className="cv-contact-icon" aria-hidden="true" />
-                  Kollegievænget 3, 8700 Horsens
-                </p>
-              </address>
-              <div className="cv-download">
-                <p className="cv-download-text">
-                  Du kan også downloade mit CV her.
-                </p>
-                <button
-                  onClick={handleDownloadPDF}
-                  className="cv-download-button"
-                >
-                  <FiDownload className="cv-download-icon" />
-                  Download mit CV
-                </button>
+                <div className="cv-download" style={{ marginTop: "3rem", padding: 0, textAlign: "left" }}>
+                  <p className="cv-download-text">
+                    Du kan også downloade mit CV her.
+                  </p>
+                  <button
+                    onClick={handleDownloadPDF}
+                    className="cv-download-button"
+                  >
+                    <FiDownload className="cv-download-icon" />
+                    Download mit CV
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <article className="cv-body">
+        <div className="cv-grid-layout">
+          <PageSidebar items={sidebarItems} />
+          <article className="cv-body cv-grid-content">
           {/* Education */}
-          <section className="cv-section cv-section-card">
+          <section id="uddannelse" className="cv-section cv-section-card">
             <h2 className="heading-2">Uddannelse</h2>
             <article className="cv-entry">
               <h3 className="heading-3">Webudvikler - Igangværende</h3>
@@ -171,7 +200,7 @@ export default function CV() {
           </section>
 
           {/* Experience */}
-          <section className="cv-section cv-section-card">
+          <section id="arbejdserfaring" className="cv-section cv-section-card">
             <h2 className="heading-2">Arbejdserfaring</h2>
             <div className="cv-stack">
               <article className="cv-entry">
@@ -206,7 +235,7 @@ export default function CV() {
           </section>
 
           {/* Leisure & Volunteer */}
-          <section className="cv-section cv-section-card">
+          <section id="fritid" className="cv-section cv-section-card">
             <h2 className="heading-2">Fritid & Frivilligt arbejde</h2>
             <article className="cv-entry">
               <h3 className="heading-3">Fredagsbar</h3>
@@ -221,10 +250,10 @@ export default function CV() {
           </section>
         </article>
 
-        <section className="cv-purple-section">
+        <section ref={purpleRef} className="cv-purple-section cv-grid-full">
           <div className="cv-body">
             {/* Languages */}
-            <section className="cv-section cv-section-card">
+            <section id="sprog" className="cv-section cv-section-card">
               <h2 className="heading-2">Sprog</h2>
               <div>
                 <h3 className="heading-3">Flydende</h3>
@@ -243,7 +272,7 @@ export default function CV() {
             </section>
 
             {/* Skills */}
-            <section className="cv-section cv-section-card">
+            <section id="faerdigheder" className="cv-section cv-section-card">
               <h2 className="heading-2">Færdigheder</h2>
               <div className="cv-skills">
                 <article>
@@ -300,7 +329,7 @@ export default function CV() {
             </section>
           </div>
         </section>
-      </main>
+        </div>
     </>
   );
 }

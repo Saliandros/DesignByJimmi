@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Page404() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -52,7 +53,7 @@ export default function Page404() {
   }, []);
 
   return (
-    <main className="frontpage">
+    <div className="frontpage">
       <section>
         <h2 className="heading-2">404 - Side ikke fundet</h2>
         {!isOnline ? (
@@ -69,16 +70,16 @@ export default function Page404() {
         {isOnline && (
           <div className="page404-button-wrapper">
             {suggestion && (
-              <a href={`/${suggestion}`} className="button-primary button-primary--accent">
+              <Link to={`/${suggestion}`} className="button-primary button-primary--accent">
                 Gå til {suggestion}
-              </a>
+              </Link>
             )}
-            <a href="/" className="button-primary">
+            <Link to="/" className="button-primary">
               Tilbage til forsiden
-            </a>
+            </Link>
           </div>
         )}
       </section>
-    </main>
+    </div>
   );
 }
