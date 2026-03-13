@@ -32,7 +32,7 @@ export const tools = [
       "Her i blandt Microinteractions.",
     ],
     links: [
-      { label: "JavaScript Blog", href: "/blog/javascript" },
+      { label: "Portfolio Website", href: "/projects/portfolio-project" },
     ],
   },
   {

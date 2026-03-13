@@ -7,7 +7,7 @@
   :root {
     /* Font families */
     --font-family-base: Montserrat, sans-serif;
-    --font-family-accent: Roboto Slab, serif;
+    --font-family-accent: Montserrat, sans-serif;
 
     /* =========================
        DESKTOP (default)
@@ -386,8 +386,14 @@ header::after {
 
   .footer .navigation-list {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
     gap: 1.25rem;
+  }
+
+  .footer .navigation-link {
+    justify-content: flex-start;
   }
 }
 /* =========================================
@@ -1513,6 +1519,33 @@ header::after {
 @media (max-width: 900px) {
   .cv-grid-layout {
     display: block;
+  }
+
+  .cv-grid-layout .page-sidebar {
+    display: none;
+  }
+
+  .cv-grid-full .cv-body {
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-header-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cv-header-left {
+    width: 100%;
+  }
+
+  .cv-header-right {
+    width: 100%;
+  }
+
+  .cv-grid-full .cv-body {
+    padding-left: 1.5rem;
   }
 }
 
