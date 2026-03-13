@@ -1,0 +1,25 @@
+/* =========================================
+   Page Section Layout
+   ========================================= */
+
+.page-section {
+  padding: 4rem 4rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.page-with-sidebar {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .page-with-sidebar {
+    display: block;
+  }
+}

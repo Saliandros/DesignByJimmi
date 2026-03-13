@@ -1,0 +1,178 @@
+/* =========================================
+   Header & Navigation Styles
+   ========================================= */
+
+header {
+  background-color: var(--color-bg-primary);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-bg-primary);
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-md);
+}
+
+.navigation-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.heading-logo {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-lg);
+  color: var(--color-logo);
+}
+
+.heading-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   Hamburger & Drawer Navigation
+   ========================================= */
+
+/* Burger-knap — skjult på desktop */
+.nav-burger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-logo);
+  padding: 0.25rem;
+  line-height: 0;
+}
+
+.nav-burger-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Overlay */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer */
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 65vw;
+  max-width: 280px;
+  height: 100dvh;
+  background: var(--color-bg-primary);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.25);
+}
+
+.nav-drawer--open {
+  transform: translateX(0);
+}
+
+/* Luk-knap */
+.nav-drawer-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-logo);
+  padding: 0.25rem;
+  line-height: 0;
+  margin-bottom: 2rem;
+}
+
+.nav-drawer-close-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* Links i drawer */
+.nav-drawer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(247, 241, 253, 0.08);
+  transition: color 0.2s ease;
+}
+
+.nav-drawer-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-drawer-link--active {
+  color: var(--color-accent);
+  font-family: var(--font-family-accent);
+}
+
+@media (max-width: 768px) {
+  /* Skjul desktop nav, vis burger */
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-burger {
+    display: block;
+  }
+
+  .nav-overlay {
+    display: block;
+  }
+}

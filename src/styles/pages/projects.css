@@ -1,0 +1,65 @@
+/* =========================================
+   Projects Page Styles
+   ========================================= */
+
+/* PROJECT HEADER */
+.project-header {
+  background: var(--color-bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), 0 100%);
+  padding: 2.5rem 0 11rem;
+  margin-bottom: -2px;
+  color: var(--color-text-secondary);
+}
+
+.project-header .heading-1,
+.project-header .heading-2,
+.project-header .heading-3,
+.project-header .cv-profile-heading,
+.project-header p,
+.project-header .cv-contact-address,
+.project-header .cv-list li {
+  color: var(--color-text-secondary);
+}
+
+.project-header-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.project-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.project-header .cv-profile-image {
+  width: 22rem;
+  height: 27rem;
+}
+
+.project-header-right {
+  text-align: right;
+}
+
+.project-header .cv-profile-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent) !important;
+  margin-bottom: 0.75rem;
+}
+
+.project-header .cv-list li {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .project-header {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+    padding: 0 0 6rem;
+  }
+}

@@ -1,0 +1,73 @@
+/* =========================================
+   Search Component
+   ========================================= */
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.search-input {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 6px;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #fff;
+}
+
+.search-suggestions li {
+  padding: 0.6rem 3rem 1rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  border-radius: 6px;
+}
+
+.search-suggestions li:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.search-suggestion-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: var(--color-primary, #333);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.search-suggestion-title {
+  flex: 1;
+}
+
+.search-suggestion-date {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}

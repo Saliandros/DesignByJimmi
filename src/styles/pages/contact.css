@@ -1,0 +1,38 @@
+/* =========================================
+   Contact Page Styles
+   ========================================= */
+
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.contact-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 31, 38, 0.55);
+}
+
+.contact-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.contact-page-hero {
+  padding: 4rem 6rem;
+}
+
+.contact-page-hero-content {
+  max-width: 750px;
+}
+
+@media (max-width: 768px) {
+  .contact-page-hero {
+    padding: 2rem 1.5rem;
+  }
+}

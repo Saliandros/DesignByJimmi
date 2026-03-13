@@ -1,0 +1,35 @@
+/* =========================================
+   Button Components
+   ========================================= */
+
+.button-primary {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  transition: background-color 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--color-accent-active);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.button-primary--accent {
+  background-color: var(--color-accent);
+}
+
+.button-primary--accent:hover {
+  background-color: var(--color-accent-active);
+}
+
+.page404-button-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,53 @@
+/* =========================================
+   Frontpage Specific Styles
+   ========================================= */
+
+/* Frontpage Bio Section */
+.bio {
+  gap: 8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Frontpage Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #5c1a8e 0%, #c86af0 100%);
+  clip-path: polygon(0 8rem, 100% 0, 100% 100%, 0 100%);
+  padding: 11rem 6rem 5rem;
+  margin-bottom: -2px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-section .heading-2,
+.contact-section .contact-text,
+.contact-section .contact-aside {
+  color: var(--color-text-secondary);
+}
+
+.contact-section .contact-form-section {
+  margin-top: 0;
+  justify-content: flex-start;
+}
+
+.contact-section .contact-form {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0 100%);
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

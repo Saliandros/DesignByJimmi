@@ -1,0 +1,54 @@
+/* =========================================
+   Typewriter Component
+   ========================================= */
+
+.typewriter {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  white-space: nowrap;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  opacity: 1;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor-pulse {
+  animation: cursor-blink 0.8s ease-in-out infinite;
+}
+
+/* Popup typewriter (old typewriter with hover) */
+.typewriter-hoverable {
+  position: relative;
+  cursor: default;
+}
+
+.typewriter-popup {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.typewriter-hoverable:hover .typewriter-popup {
+  opacity: 1;
+}

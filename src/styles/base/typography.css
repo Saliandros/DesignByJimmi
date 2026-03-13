@@ -1,0 +1,65 @@
+/* =========================================
+   Typography & Heading System
+   ========================================= */
+
+.heading-1 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  font-weight: var(--font-weight-xl);
+  color: var(--color-text-primary);
+  margin: 0 0 1rem;
+}
+
+.heading-2 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem;
+}
+
+.heading-3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 0.5rem;
+}
+
+/* Contextual overrides */
+.project-card-content .heading-3 { 
+  color: var(--color-text-secondary); 
+  font-size: 1.125rem; 
+  margin-bottom: 0.25rem; 
+}
+
+/* Links */
+.link-style {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+.link-style:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.link-style-active {
+  font-family: var(--font-family-accent);
+  text-decoration: underline;
+  color: var(--color-accent-active);
+}
+
+.link-style-body {
+  color: var(--color-link-body);
+  text-decoration: underline;
+}
+
+.link-style-body:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.hover-color {
+  transition: color 0.2s ease;
+}

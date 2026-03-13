@@ -1,0 +1,36 @@
+/* =========================================
+   Main CSS - Imports all modular styles
+   
+   This file imports all CSS modules in the correct order.
+   The order matters for cascading and specificity.
+   ========================================= */
+
+/* 1. Base Styles - Foundation */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* 2. Layout - Structural components */
+@import './layout/page-section.css';
+@import './layout/header.css';
+@import './layout/footer.css';
+
+/* 3. Components - Reusable UI elements */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/forms.css';
+@import './components/hero.css';
+@import './components/sidebar.css';
+@import './components/tools.css';
+@import './components/typewriter.css';
+@import './components/search.css';
+
+/* 4. Pages - Page-specific styles */
+@import './pages/frontpage.css';
+@import './pages/contact.css';
+@import './pages/cv.css';
+@import './pages/projects.css';
+@import './pages/about.css';
+
+/* 5. Utilities - Helper classes (last for highest specificity) */
+@import './utilities/utilities.css';

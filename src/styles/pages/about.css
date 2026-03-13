@@ -1,0 +1,107 @@
+/* =========================================
+   About Page Styles
+   ========================================= */
+
+.about-content-wrapper {
+  background: var(--color-bg-page);
+  clip-path: polygon(0 8rem, 100% 0, 100% 100%, 0 100%);
+  margin-top: -8rem;
+  padding-top: 6rem;
+}
+
+.about-body {
+  padding: 4rem 4rem 3rem;
+  color: var(--color-text-primary);
+}
+
+.about-section {
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.75rem;
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+/* Accessibility: ensure contrast for text inside cards */
+.about-section, .about-section-card {
+  color: var(--color-text-primary);
+}
+
+.about-cat-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.about-cat-image {
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+/* Blog Section */
+.blog-section {
+  padding: 2rem;
+}
+
+.blog-section > h2 {
+  width: 100%;
+}
+
+.blog-groups-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.blog-group {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.blog-group-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.blog-group-list { 
+  gap: 0.4rem; 
+}
+
+.blog-group-link {
+  color: var(--color-link-body);
+  text-decoration: underline;
+}
+
+.blog-group-link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-body { 
+    padding: 2rem 1.5rem; 
+  }
+}
+
+@media (max-width: 600px) {
+  .about-cat-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-cat-image {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
+}

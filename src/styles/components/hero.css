@@ -1,0 +1,253 @@
+/* =========================================
+   Hero Sections
+   ========================================= */
+
+/* New Frontpage Hero */
+.new-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8rem;
+  padding: 3rem 6rem 0;
+  background: var(--color-bg-primary);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), 0 100%);
+  overflow: hidden;
+  min-height: 45vh;
+}
+
+.new-hero-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: center;
+  padding-top: 2em;
+  padding-bottom: 4rem;
+}
+
+.new-hero-h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  animation: hero-slide-left 0.8s ease-out both;
+}
+
+.new-hero-h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0;
+  animation: hero-slide-right 0.8s ease-out both;
+}
+
+.new-hero-image {
+  width: auto;
+  height: 580px;
+  align-self: flex-end;
+  object-fit: cover;
+  animation: hero-fade-up 0.6s ease-out 1.6s both;
+}
+
+.new-hero-typewriter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  animation: hero-fade-up 0.6s ease-out 0.9s both;
+  color: var(--color-text-secondary);
+  font-size: clamp(0.65rem, 2.8vw, 1rem);
+  height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.new-hero-typewriter .typewriter {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.new-hero-socialmedia {
+  animation: hero-fade-up 0.6s ease-out 1.6s both;
+}
+
+.new-hero .hero-socialmedia-label,
+.new-hero .hero-socialmedia-linkedin,
+.new-hero .hero-socialmedia-github {
+  color: var(--color-text-secondary);
+}
+
+@keyframes hero-slide-left {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+
+@keyframes hero-slide-right {
+  from { transform: translateX(100vw);  opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Bio Hero */
+.bio {
+  gap: 8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Old Hero (with background) */
+.hero {
+  gap: 12rem;
+  position: relative;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/image/nature.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 750px;
+  text-align: left;
+}
+
+.hero-image {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary);
+  margin-left: auto;
+}
+
+.hero-p,
+.contact-text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+.hero-p {
+  font-weight: var(--font-weight-md);
+  margin-bottom: 1.5rem;
+}
+
+.hero-socialmedia a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.hero-socialmedia a:hover {
+  color: var(--color-accent-active);
+  text-decoration: underline;
+}
+
+.hero-socialmedia-row {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-socialmedia-label {
+  gap: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.hero-socialmedia-icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .new-hero {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 1.5rem 4rem 0.5rem;
+    gap: 0;
+    text-align: left;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+    min-height: 52vh;
+    overflow: hidden;
+  }
+
+  /* Gradient overlay — mørkt til venstre, transparent til højre */
+  .new-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--color-bg-primary) 25%,
+      rgba(27, 31, 38, 0.85) 50%,
+      rgba(27, 31, 38, 0.4) 75%,
+      transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .new-hero-text {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 65%;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  .new-hero-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 0;
+  }
+
+  .new-hero-h1 { font-size: 1.9rem; }
+  .new-hero-h2 { font-size: 1.2rem; }
+
+  .new-hero-socialmedia {
+    gap: 1.25rem;
+  }
+
+  .bio {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .bio .hero-image {
+    display: none;
+  }
+
+  .bio .hero-content {
+    padding: 0.75rem 0 0;
+    max-width: 100%;
+  }
+}
