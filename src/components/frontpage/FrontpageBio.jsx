@@ -12,7 +12,7 @@ export default function FrontpageBio() {
         </p>
         <p className="hero-p">
           I dag læser jeg til Webudvikler på Aarhus Erhvervsakademi. Jeg elsker
-          at skabe brugervenlige, men også æstetiske produkter, og det her er
+          at skabe <strong>brugervenlige</strong>, men også <strong>æstetiske projekter</strong>, og det her er
           mit portfolio, hvor man kan se de programmer jeg har lavet.
         </p>
         <p className="hero-p">

@@ -59,10 +59,9 @@ export default function Footer() {
       </section>
       <section className="footer-bottom">
         <p className="footer-text">
-          Lavet af Jimmi Berg Larsen - 2025
+          © {new Date().getFullYear()} Jimmi Berg Larsen
         </p>
         <p className="footer-text">
-          Læs mere om min&nbsp;
           <Link to="/privacy-policy" className="link-style hover-color">
             Privatlivspolitik
           </Link>
