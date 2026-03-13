@@ -53,6 +53,7 @@
 .link-style-body {
   color: var(--color-link-body);
   text-decoration: underline;
+  font-weight: 500;
 }
 
 .link-style-body:hover {

@@ -123,19 +123,27 @@ export default function PortfolioProject() {
                 hvilket passer perfekt til et portfolio. Det eneste kompromis er, at det er en Google Font, som loader eksternt 
                 når siden åbnes – men for mig vejer det elegante udtryk tungere end de få ekstra millisekunder i load-tid.
               </p>
+              <p className="mt-075">
+                Alle billeder på siden har afrundede hjørner gennem <strong>border-radius</strong>. Dette skaber et blødere, 
+                mere moderne udtryk og får billederne til at flyde bedre sammen med resten af designet. De skarpe hjørner 
+                brydes, hvilket giver et mere tilgængeligt og venligt indtryk – perfekt til et portfolio der skal vise 
+                både professionalisme og personlighed.
+              </p>
             </section>
 
             <section id="indhold-02" className="cv-section cv-section-card">
               <h2 className="heading-2">Optimering af siden</h2>
               <p>
                 Performance og bæredygtighed har været vigtige fokuspunkter i udviklingen. Jeg har kørt omfattende tests 
-                gennem <strong>Lighthouse</strong>, <strong>PageSpeed Insights</strong> og <strong>Website Carbon</strong> 
+                gennem <strong>Lighthouse</strong>, <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="link-style-body">PageSpeed Insights</a> og{" "}
+                <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener noreferrer" className="link-style-body">Website Carbon</a>{" "}
                 for at sikre, at siden både er hurtig og miljøvenlig.
               </p>
               <p className="mt-075">
                 Alle billeder er konverteret til <strong>WebP-format</strong> og komprimeret til en balanceret kvalitet. 
-                Selvom det betyder en lille reduktion i billedkvalitet, er det en acceptabel trade-off for web – og resultatet 
-                er betydeligt hurtigere load-tider og mindre databrug.
+                Derudover bruger alle billeder <strong>lazy loading</strong>, hvilket betyder at de først loades når de skal 
+                vises på skærmen. Selvom det betyder en lille reduktion i billedkvalitet, er det en acceptabel trade-off for web – 
+                og resultatet er betydeligt hurtigere load-tider og mindre databrug.
               </p>
               <p className="mt-075">
                 SEO har også været i fokus. Jeg har optimeret meta-tags, alt-tekster og heading-struktur for at sikre, 
