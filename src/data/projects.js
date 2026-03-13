@@ -8,20 +8,4 @@ export const projects = [
     date: "29-01-2026",
   },
   // du kan tilføje uendeligt mange her
-    {
-    id: 2,
-    title: "MongoDB - Condidate.dk",
-    description: "Vi skulle oprette en database til Condidate.dk ved hjælp af MongoDB.",
-    image: "/assets/image/projectimage/mongodb.webp",
-    link: "/projects/candidate-project",
-    date: "29-01-2026",
-  },
-      {
-    id: 3,
-    title: "LineUp - Semester 1",
-    description: "LineUp, var et projekt hvor vi skulle bruge alt hvad vi havde lært på første semester",
-    image: "/assets/image/projectimage/logoLineUp-Yellow.webp",
-    link: "/projects/lineup-project",
-    date: "29-01-2026",
-  },
 ];
