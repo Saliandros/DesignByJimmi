@@ -18,7 +18,7 @@ const sidebarItems = [
 
 export default function CV() {
   const downloadUrl =
-    "https://drive.google.com/uc?export=download&id=1oKt8fdTqrKXsRva7SJl0s8OijfNoYKOA";
+    "https://drive.google.com/uc?export=download&id=13bCOuTfu_HnEme5GShPVFWj4Q_vI289a";
 
   const [previousEducationOpen, setPreviousEducationOpen] = useState(false);
   const [showDownloadPopup, setShowDownloadPopup] = useState(false);
