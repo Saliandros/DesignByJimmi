@@ -1,4 +1,3 @@
-import { SiGithub } from "react-icons/si";
 import { FiCalendar } from "react-icons/fi";
 import PageSidebar from "../../components/PageSidebar.jsx";
 
@@ -7,18 +6,18 @@ const sidebarItems = [
   { label: "Placeholder", href: "#indhold-01" },
 ];
 
-export default function LineUp() {
+export default function GroupAppProject() {
   return (
     <>
       {/* Dark header */}
       <section className="project-header">
         <div className="cv-body">
-          <h1 className="heading-1">LineUp</h1>
+          <h1 className="heading-1">Gruppe App</h1>
           <div className="project-header-columns">
             <div className="project-header-left">
               <img
                 src="/assets/image/HERO.webp"
-                alt="LineUp"
+                alt="Gruppe App"
                 className="cv-profile-image"
               />
               <address className="cv-contact-address">
@@ -26,15 +25,6 @@ export default function LineUp() {
                   <FiCalendar className="cv-contact-icon" aria-hidden="true" />
                   Placeholder dato
                 </p>
-                <a
-                  href="https://github.com/Saliandros"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-github-link"
-                >
-                  <SiGithub className="project-github-icon" aria-hidden="true" />
-                  Se på GitHub
-                </a>
               </address>
             </div>
             <div className="project-header-right">

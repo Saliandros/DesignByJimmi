@@ -16,6 +16,9 @@ import Page404 from "./pages/page404.jsx";
 import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
 import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
 import LineUp from "./pages/Projects/lineup-project.jsx";
+import BookSpaceProject from "./pages/projects/book-space-project.jsx";
+import StickerSmashProject from "./pages/projects/stickersmash-project.jsx";
+import GroupAppProject from "./pages/projects/group-app-project.jsx";
 
 /* blog routes */
 import JavaScript from "./pages/blog/javascript.jsx";
@@ -40,6 +43,9 @@ root.render(
           <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
           <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
           <Route path="/projects/lineup-project" element={<LineUp />} />
+          <Route path="/projects/book-space-project" element={<BookSpaceProject />} />
+          <Route path="/projects/stickersmash-project" element={<StickerSmashProject />} />
+          <Route path="/projects/group-app-project" element={<GroupAppProject />} />
 
           {/* blog routes */}
           <Route path="/blog/javascript" element={<JavaScript />} />
