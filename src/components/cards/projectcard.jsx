@@ -73,6 +73,10 @@ export default function ProjectCard({ project, badgeNumber }) {
         src={project.image}
         alt={project.title}
         className="project-card-image"
+        style={{
+          objectFit: project.imageStyle || "cover",
+          backgroundColor: project.imageBg || "transparent",
+        }}
         loading="lazy"
       />
       <div className="project-card-content">

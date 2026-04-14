@@ -20,7 +20,7 @@ export default function PortfolioProject() {
           <div className="project-header-columns">
             <div className="project-header-left">
               <img
-                src="/assets/image/HERO.webp"
+                src="/assets/image/projectimage/portfolio-img.webp"
                 alt="Portfolio Website"
                 className="cv-profile-image"
               />
