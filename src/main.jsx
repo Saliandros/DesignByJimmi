@@ -19,6 +19,7 @@ import LineUp from "./pages/Projects/lineup-project.jsx";
 import BookSpaceProject from "./pages/projects/book-space-project.jsx";
 import StickerSmashProject from "./pages/projects/stickersmash-project.jsx";
 import GroupAppProject from "./pages/projects/group-app-project.jsx";
+import ProjectIdle from "./pages/projects/project-idle-project.jsx";
 
 /* blog routes */
 import JavaScript from "./pages/blog/javascript.jsx";
@@ -46,6 +47,7 @@ root.render(
           <Route path="/projects/book-space-project" element={<BookSpaceProject />} />
           <Route path="/projects/stickersmash-project" element={<StickerSmashProject />} />
           <Route path="/projects/group-app-project" element={<GroupAppProject />} />
+          <Route path="/projects/project-idle-project" element={<ProjectIdle />} />
 
           {/* blog routes */}
           <Route path="/blog/javascript" element={<JavaScript />} />

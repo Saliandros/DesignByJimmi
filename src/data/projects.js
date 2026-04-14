@@ -35,13 +35,15 @@ export const projects = [
     link: "/projects/stickersmash-project",
     date: "07-04-2026",
   },
-  {
+   {
+  // du kan tilføje uendeligt mange her
     id: 5,
-    title: "Gruppe App",
-    description: "Placeholder.",
-    image: "/assets/image/HERO.webp",
-    link: "/projects/group-app-project",
+    title: "Project Idle",
+    description: "En fullstack app til at håndtere køer og ventelister, bygget med React, Node.js, Express og Supabase.",
+    image: "/assets/image/projectimage/project-idle-img.svg",
+    imageStyle: "contain",
+    imageBg: "#FFCF70",
+    link: "/projects/project-idle-project",
     date: "07-04-2026",
   },
-  // du kan tilføje uendeligt mange her
 ];

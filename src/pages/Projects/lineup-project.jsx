@@ -74,6 +74,8 @@ export default function LineUp() {
                   </p>
                   <p className="mt-075">
                     I gruppearbejdet var opgaverne fordelt og styret via <strong>GitHub Projects</strong>.
+                    Dette gav os et godt overblik over opgaverne og gjorde det nemt at holde styr på, hvem der arbejdede på hvad,
+                    og hvilke opgaver der var i gang, færdige eller endnu ikke påbegyndte.
                   </p>
                 </div>
               </div>
@@ -104,6 +106,10 @@ export default function LineUp() {
                 className="project-content-image"
                 loading="lazy"
               />
+                <p className="mt-075">
+                I forbindelse med databasen lavede jeg et <strong>ER-diagram</strong> — udarbejdet i samarbejde med
+                ChatGPT da jeg skulle normalisere til <strong>3. normalform</strong>. Diagrammet kan ses herunder.
+              </p>
             </section>
 
           </div>
