@@ -16,10 +16,10 @@ import Page404 from "./pages/page404.jsx";
 import PortfolioProject from "./pages/Projects/portfolio-project.jsx";
 import MongoDBCondidate from "./pages/Projects/candidate-project.jsx";
 import LineUp from "./pages/Projects/lineup-project.jsx";
-import BookSpaceProject from "./pages/projects/book-space-project.jsx";
-import StickerSmashProject from "./pages/projects/stickersmash-project.jsx";
-import GroupAppProject from "./pages/projects/group-app-project.jsx";
-import ProjectIdle from "./pages/projects/project-idle-project.jsx";
+import BookSpaceProject from "./pages/Projects/book-space-project.jsx";
+import StickerSmashProject from "./pages/Projects/stickersmash-project.jsx";
+import GroupAppProject from "./pages/Projects/group-app-project.jsx";
+import ProjectIdle from "./pages/Projects/project-idle-project.jsx";
 
 /* blog routes */
 import JavaScript from "./pages/blog/javascript.jsx";
