@@ -1,11 +1,49 @@
 export const projects = [
   {
     id: 1,
+    title: "LineUp",
+    description: "En fullstack app til at håndtere køer og ventelister, bygget med React, Node.js, Express og Supabase.",
+    image: "/assets/image/projectimage/lineup-img.svg",
+    imageStyle: "contain",
+    imageBg: "#FFCF70",
+    link: "/projects/lineup-project",
+    date: "2026-04-07",
+  },
+  {
+    id: 2,
     title: "Portfolio Website",
     description: "Mit personlige portfolio website lavet med React og CSS.",
-    image: "/assets/image/HERO.webp",
+    image: "/assets/image/projectimage/portfolio-img.webp",
+    imageStyle: "cover",
     link: "/projects/portfolio-project",
-    date: "29-01-2026",
+    date: "2026-01-29",
   },
-  // du kan tilføje uendeligt mange her
+  {
+    id: 3,
+    title: "Book Space",
+    description: "En digital boghylde app til at opdage, søge og gemme bøger.",
+    image: "/assets/image/projectimage/book-space-img.svg",
+    imageStyle: "contain",
+    link: "/projects/book-space-project",
+    date: "2026-04-07",
+  },
+  {
+    id: 4,
+    title: "StickerSmash",
+    description: "En React Native app til at lave sjove billeder med stickers.",
+    image: "/assets/image/HERO.webp",
+    link: "/projects/stickersmash-project",
+    date: "2026-04-07",
+  },
+  {
+    // du kan tilføje uendeligt mange her
+    id: 5,
+    title: "Project Idle",
+    description: "En fullstack app til at håndtere køer og ventelister, bygget med React, Node.js, Express og Supabase.",
+    image: "/assets/image/projectimage/project-idle-img.svg",
+    imageStyle: "contain",
+    imageBg: "#FFCF70",
+    link: "/projects/project-idle-project",
+    date: "2026-04-07",
+  },
 ];

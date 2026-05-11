@@ -61,8 +61,7 @@ export default function ProjectCard({ project, badgeNumber }) {
       onTouchEnd={handleTouchEnd}
       onKeyDown={handleKeyDown}
       tabIndex={0}
-      role="link"
-      aria-label={`Aabn projekt: ${project.title}`}
+      aria-label={`Åbn projekt: ${project.title}`}
     >
       {badgeNumber ? (
         <div className="project-card-badge" aria-hidden="true">
@@ -73,6 +72,10 @@ export default function ProjectCard({ project, badgeNumber }) {
         src={project.image}
         alt={project.title}
         className="project-card-image"
+        style={{
+          objectFit: project.imageStyle || "cover",
+          backgroundColor: project.imageBg || "transparent",
+        }}
         loading="lazy"
       />
       <div className="project-card-content">

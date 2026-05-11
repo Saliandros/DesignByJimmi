@@ -76,6 +76,15 @@
   font-size: 1.25rem;
 }
 
+.project-content-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .project-header {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);

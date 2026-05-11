@@ -53,7 +53,7 @@ export default function ContactForm({ children, endpoint }) {
     setFieldSuccess((prev) => ({ ...prev, [name]: !error && value.trim() !== "" }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const requiredFields = ["firstname", "lastname", "email", "message"];
@@ -76,43 +76,46 @@ export default function ContactForm({ children, endpoint }) {
 
     const FORMSPREE_ENDPOINT = endpoint || import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
-    (async () => {
-      try {
-        setSending(true);
+    if (!FORMSPREE_ENDPOINT) {
+      setPopup({ type: "error", message: "Kontaktformularen er ikke konfigureret korrekt. Prøv igen senere." });
+      return;
+    }
 
-        const body = {
-          firstname: form.firstname,
-          lastname: form.lastname,
-          email: form.email,
-          message: form.message,
-          _subject: `Kontaktformular fra ${form.firstname} ${form.lastname}`,
-        };
-        if (form.company) body.company = form.company;
+    try {
+      setSending(true);
 
-        const res = await fetch(FORMSPREE_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(body),
-        });
+      const body = {
+        firstname: form.firstname,
+        lastname: form.lastname,
+        email: form.email,
+        message: form.message,
+        _subject: `Kontaktformular fra ${form.firstname} ${form.lastname}`,
+      };
+      if (form.company) body.company = form.company;
 
-        const data = await res.json().catch(() => ({}));
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(body),
+      });
 
-        if (!res.ok) {
-          const msg = data.error || data.message || "Der opstod en fejl ved afsendelse.";
-          setPopup({ type: "error", message: msg });
-        } else {
-          setPopup({ type: "success", message: "Din besked er sendt! Tak for din henvendelse." });
-          setForm({ firstname: "", lastname: "", email: "", company: "", message: "" });
-          setFieldErrors({});
-          setFieldSuccess({});
-          setTouched({});
-        }
-      } catch {
-        setPopup({ type: "error", message: "Kunne ikke sende beskeden. Prøv igen senere." });
-      } finally {
-        setSending(false);
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        const msg = data.error || data.message || "Der opstod en fejl ved afsendelse.";
+        setPopup({ type: "error", message: msg });
+      } else {
+        setPopup({ type: "success", message: "Din besked er sendt! Tak for din henvendelse." });
+        setForm({ firstname: "", lastname: "", email: "", company: "", message: "" });
+        setFieldErrors({});
+        setFieldSuccess({});
+        setTouched({});
       }
-    })();
+    } catch {
+      setPopup({ type: "error", message: "Kunne ikke sende beskeden. Prøv igen senere." });
+    } finally {
+      setSending(false);
+    }
   };
 
   const fieldClass = (name) => {
