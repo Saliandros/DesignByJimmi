@@ -62,14 +62,8 @@ export default function ProjectIdle() {
                 <div>
                   <h2 className="heading-2">Om projektet</h2>
                   <p>
-                    Project Idle er et projekt, jeg har arbejdet på i forbindelse med Cross-Platform udvikling.
-                    Det er en incrimential app i samme stil som Clicker Heroes.
-                  </p>
-                  <p className="mt-075">
-
-                  </p>
-                  <p className="mt-075">
-
+                    Project Idle er et projekt, jeg har arbejdet på i forbindelse med <strong>Cross-Platform</strong> udvikling.
+                    Det er en <strong>incremental</strong> app i samme stil som <strong>Clicker Heroes</strong>.
                   </p>
                 </div>
               </div>
@@ -84,16 +78,16 @@ export default function ProjectIdle() {
               </p>
               <p>
                 Ideen er at blande spil genrene <strong>clicker</strong> og <strong>resource management</strong> sammen, 
-                i en fantasy setting. Man starter op med at vælge en af de tre factioner, Elves, Humans eller Lizardmen.
+                i en <strong>fantasy</strong> setting. Man starter op med at vælge en af de tre factioner, <strong>Elves</strong>, <strong>Humans</strong> eller <strong>Lizardmen</strong>.
                 Alle factioner har forskellige styrker og svagheder, og forskellige strategier man kan bruge for at optimere sin progression.
               </p>
               <p>
-                Factionerne har deres egen primær resource, som man bruger til at opgradere deres enheder, men man kan også sælge den for gold.
-                På et tidspunkt under progressionen vil man få adgang til en ambassade, hvor man kan lave diplomatiske relationer med de andre factioner.
+                Factionerne har deres egen <strong>primær resource</strong>, som man bruger til at opgradere deres enheder, men man kan også sælge den for <strong>gold</strong>.
+                På et tidspunkt under progressionen vil man få adgang til en <strong>ambassade</strong>, hvor man kan lave diplomatiske relationer med de andre factioner.
                 Det gør at man får adgang til at starte en ny koloni med den pågældende faction og dermed få adgang til deres resourcer.
                 Det bliver relevant da man på sigt skal bruge alle tre factioners primære resource for at progress videre.
               </p>
-              <h2 className="heading-2">Det skal ikke bare være det næste dårlige klikker-spil</h2>
+              <h3 className="heading-3">Det skal ikke bare være det næste dårlige klikker-spil</h3>
               <p>
                 For mig er det meget vigtig, at det ikke bare bliver det næste dårlige klikker-spil, som man finder på app store.
                 Jeg vil gerne lave et spil, som er sjovt at spille, og som har en god progression og belønning system.
@@ -103,7 +97,7 @@ export default function ProjectIdle() {
                 Selvom det er det samme koncept, men det får det til at lyde lidt RPG agtigt.
               </p>      
               <p>
-                Tanken om at lave et "New Game+" system, hvor man kan starte forfra er også tiltalende, men bliver ikke en del af mit første draft.
+                Tanken om at lave et <strong>"New Game+"</strong> system, hvor man kan starte forfra er også tiltalende, men bliver ikke en del af mit første draft.
                 Til at starte med fokuserede jeg på at få det grundlæggende gameplay op at køre, og derfor kun lave en af factionerne.
               </p>
               <img
@@ -116,6 +110,11 @@ export default function ProjectIdle() {
                 Det er en skitse af det første draft hvor jeg har tegnet hvordan jeg forstiller mig at spillet kommer til at se ud.
                 Hvis man vil se wireframes og mockups kan man se det på min Figma, som er offentligt tilgængeligt her{" "}
                  <a href="https://www.figma.com/file/0n9sH8mLh7Xo2l3j1u5qkA/Project-Idle?type=design&node-id=0-1&t=Zt6n9vK7b2eXoVh-4" target="_blank" rel="noopener noreferrer" className="link-style-body">Figma</a>.
+              </p>
+              <p className="mt-075">
+                Billederne i projektet er genereret med <strong>ChatGPT</strong>. Da dette er et skoleprojekt har
+                det ikke været prioritet at få en grafiker tilknyttet. Hvis projektet på sigt udvikler sig til noget
+                jeg vil udgive, vil jeg selvfølgelig få en rigtig grafiker til at lave artwork.
               </p>                
             </section>
 
@@ -143,7 +142,7 @@ export default function ProjectIdle() {
                 eksempelvis nye factions, heroes eller diplomatiske relationer, uden at skulle omstrukturere hele databasen.
               </p>
               <img
-                src="/assets/image/ER-diagram-project-idle.svg"
+                src="/assets/image/ER-diagram-project-idle.webp"
                 alt="ER diagram for Project Idle databasen"
                 className="project-content-image"
                 loading="lazy"
