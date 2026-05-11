@@ -1,8 +1,10 @@
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navigation from "./components/header-footer/navigation.jsx";
 import Footer from "./components/header-footer/footer.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 import Frontpage from "./pages/frontpage.jsx";
 import Projects from "./pages/projects.jsx";
@@ -27,36 +29,41 @@ import JavaScript from "./pages/blog/javascript.jsx";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
-    <div className="app-shell">
-      <Navigation />
+  <StrictMode>
+    <BrowserRouter>
+      <div className="app-shell">
+        <Navigation />
 
-      <main className="app-shell-main">
-        <Routes>
-          <Route path="/" element={<Frontpage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cv" element={<CV />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <main className="app-shell-main">
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Frontpage />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cv" element={<CV />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-          {/* project routes */}
-          <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
-          <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
-          <Route path="/projects/lineup-project" element={<LineUp />} />
-          <Route path="/projects/book-space-project" element={<BookSpaceProject />} />
-          <Route path="/projects/stickersmash-project" element={<StickerSmashProject />} />
-          <Route path="/projects/group-app-project" element={<GroupAppProject />} />
-          <Route path="/projects/project-idle-project" element={<ProjectIdle />} />
+              {/* project routes */}
+              <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
+              <Route path="/projects/candidate-project" element={<MongoDBCondidate />} />
+              <Route path="/projects/lineup-project" element={<LineUp />} />
+              <Route path="/projects/book-space-project" element={<BookSpaceProject />} />
+              <Route path="/projects/stickersmash-project" element={<StickerSmashProject />} />
+              <Route path="/projects/group-app-project" element={<GroupAppProject />} />
+              <Route path="/projects/project-idle-project" element={<ProjectIdle />} />
 
-          {/* blog routes */}
-          <Route path="/blog/javascript" element={<JavaScript />} />
+              {/* blog routes */}
+              <Route path="/blog/javascript" element={<JavaScript />} />
 
-          <Route path="*" element={<Page404 />} />
-        </Routes>
-      </main>
+              <Route path="*" element={<Page404 />} />
+            </Routes>
+          </ErrorBoundary>
+        </main>
 
-      <Footer />
-    </div>
-  </BrowserRouter>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  </StrictMode>
 );
+

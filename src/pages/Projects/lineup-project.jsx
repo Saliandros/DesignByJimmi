@@ -106,10 +106,6 @@ export default function LineUp() {
                 className="project-content-image"
                 loading="lazy"
               />
-                <p className="mt-075">
-                I forbindelse med databasen lavede jeg et <strong>ER-diagram</strong> — udarbejdet i samarbejde med
-                ChatGPT da jeg skulle normalisere til <strong>3. normalform</strong>. Diagrammet kan ses herunder.
-              </p>
             </section>
 
           </div>

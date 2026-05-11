@@ -7,7 +7,7 @@ export const projects = [
     imageStyle: "contain",
     imageBg: "#FFCF70",
     link: "/projects/lineup-project",
-    date: "07-04-2026",
+    date: "2026-04-07",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const projects = [
     image: "/assets/image/projectimage/portfolio-img.webp",
     imageStyle: "cover",
     link: "/projects/portfolio-project",
-    date: "29-01-2026",
+    date: "2026-01-29",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const projects = [
     image: "/assets/image/projectimage/book-space-img.svg",
     imageStyle: "contain",
     link: "/projects/book-space-project",
-    date: "07-04-2026",
+    date: "2026-04-07",
   },
   {
     id: 4,
@@ -33,10 +33,10 @@ export const projects = [
     description: "En React Native app til at lave sjove billeder med stickers.",
     image: "/assets/image/HERO.webp",
     link: "/projects/stickersmash-project",
-    date: "07-04-2026",
+    date: "2026-04-07",
   },
-   {
-  // du kan tilføje uendeligt mange her
+  {
+    // du kan tilføje uendeligt mange her
     id: 5,
     title: "Project Idle",
     description: "En fullstack app til at håndtere køer og ventelister, bygget med React, Node.js, Express og Supabase.",
@@ -44,6 +44,6 @@ export const projects = [
     imageStyle: "contain",
     imageBg: "#FFCF70",
     link: "/projects/project-idle-project",
-    date: "07-04-2026",
+    date: "2026-04-07",
   },
 ];

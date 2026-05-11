@@ -74,7 +74,7 @@ export default function Navigation() {
         className="nav-burger"
         aria-label={menuOpen ? "Luk menu" : "Åbn menu"}
         aria-expanded={menuOpen}
-        onClick={() => setMenuOpen(true)}
+        onClick={() => setMenuOpen((o) => !o)}
         ref={burgerRef}
       >
         <FiMenu className="nav-burger-icon" />
