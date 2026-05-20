@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/header-footer/navigation.jsx";
 import Footer from "./components/header-footer/footer.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import { registerServiceWorker } from "./registerServiceWorker.js";
 
 import Frontpage from "./pages/frontpage.jsx";
 import Projects from "./pages/projects.jsx";
@@ -28,6 +29,8 @@ import JavaScript from "./pages/blog/javascript.jsx";
 
 const root = createRoot(document.getElementById("root"));
 
+registerServiceWorker();
+
 root.render(
   <StrictMode>
     <BrowserRouter>
@@ -43,6 +46,7 @@ root.render(
               <Route path="/cv" element={<CV />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/offline" element={<Page404 />} />
 
               {/* project routes */}
               <Route path="/projects/portfolio-project" element={<PortfolioProject />} />
